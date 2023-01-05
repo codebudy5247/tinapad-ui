@@ -1,5 +1,11 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import Image from "../../components/Image";
+import tokeroImg from "../../assets/tokero.png";
+import rikkeiImg from "../../assets/rikkeicapital.png";
+import codevixImg from "../../assets/codevix.png";
+import copperImg from "../../assets/copper.png";
+import elrondImg from "../../assets/elrond.png";
 const Footer = () => {
   return (
     <Box
@@ -9,7 +15,7 @@ const Footer = () => {
         //   justifyContent: "space-between",
         paddingLeft: 3,
         paddingRight: 3,
-        mb:4
+        mb: 4,
       }}
     >
       <Box>
@@ -38,6 +44,50 @@ const Footer = () => {
           Tinapad is honored and thrilled to be backed by leading Venture
           Capitals in blockchain industry.
         </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          mt: 2,
+          width: "100%",
+          justifyContent: "space-between",
+        }}
+      >
+        <Image
+          disabledEffect
+          visibleByDefault
+          alt="empty content"
+          src={tokeroImg}
+          sx={{ height: 30 }}
+        />
+        <Image
+          disabledEffect
+          visibleByDefault
+          alt="empty content"
+          src={rikkeiImg}
+          sx={{ height: 30 }}
+        />
+        <Image
+          disabledEffect
+          visibleByDefault
+          alt="empty content"
+          src={elrondImg}
+          sx={{ height: 30 }}
+        />
+        <Image
+          disabledEffect
+          visibleByDefault
+          alt="empty content"
+          src={codevixImg}
+          sx={{ height: 30 }}
+        />
+        <Image
+          disabledEffect
+          visibleByDefault
+          alt="empty content"
+          src={copperImg}
+          sx={{ height: 30 }}
+        />
       </Box>
     </Box>
   );

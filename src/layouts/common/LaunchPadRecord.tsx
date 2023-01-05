@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import Carousel from "../common/Corousel/Carousel";
+import Carousel from "./Corousel/Carousel";
 const LaunchPadRecord = () => {
   return (
     <>

@@ -5,8 +5,7 @@ import { ColorButton } from "../../components/Button";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import LaunchPadCard from "./LaunchPadCard";
 import LaunchPadStatisticsCard from "./LaunchPadStatisticsCard";
-import presalesBackImg from "../../assets/img1.png";
-import { borderRadius } from "@mui/system";
+
 const LaunchPad = () => {
   return (
     <>
