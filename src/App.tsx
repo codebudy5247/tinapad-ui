@@ -35,7 +35,7 @@ function App() {
           <Route path="/explore" element={<Explore />} />
           <Route path="/contribution" element={<MyContribution />} />
           <Route path="/alarm" element={<MyAlarm />} />
-          <Route path="/alarm" element={<CreatePreasale />} />
+          <Route path="/create-presales" element={<CreatePreasale />} />
           </Routes>
           </Fragment>
           </Router>
