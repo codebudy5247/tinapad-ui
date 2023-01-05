@@ -77,8 +77,6 @@ export default function Image({
   );
 }
 
-// ----------------------------------------------------------------------
-
 function getRatio(ratio = '1/1') {
   return {
     '4/3': 'calc(100% / 4 * 3)',

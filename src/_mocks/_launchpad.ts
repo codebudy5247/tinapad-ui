@@ -23,7 +23,7 @@ import stat2BackImg from "../assets/stat2.png";
 import stat3BackImg from "../assets/stat3.png";
 import stat4BackImg from "../assets/stat4.png";
 
-
+import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 
 
 export const _launchpad = [
@@ -77,6 +77,7 @@ export const _launchpadStatistics = [
     incrementValue: "20",
     image: totalProjImg,
     backgroundImg: stat1BackImg,
+    icon:""
   },
   {
     id: "2",
@@ -85,6 +86,7 @@ export const _launchpadStatistics = [
     incrementValue: "10",
     image: totalTokenImg,
     backgroundImg: stat2BackImg,
+    icon:"cryptocurrency:usd"
   },
   {
     id: "3",
@@ -93,6 +95,7 @@ export const _launchpadStatistics = [
     incrementValue: "20",
     image: totalUSerImg,
     backgroundImg: stat3BackImg,
+    icon:"mdi:users"
   },
   {
     id: "4",
@@ -101,6 +104,7 @@ export const _launchpadStatistics = [
     incrementValue: "40",
     image: totalFundRaisedImg,
     backgroundImg: stat4BackImg,
+    icon:""
   },
 ];
 
@@ -141,3 +145,4 @@ export const _launchpadRecord = [
     backgroundImg:rec5BackImg
   },
 ]
+
