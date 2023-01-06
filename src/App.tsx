@@ -10,7 +10,11 @@ import MyContribution from './pages/MyContribution';
 import MyAlarm from './pages/MyAlarm';
 import CreatePreasale from './pages/CreatePreasale';
 
-const mdTheme = createTheme();
+const mdTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
 
 function App() {
