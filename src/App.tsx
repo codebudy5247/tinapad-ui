@@ -1,9 +1,8 @@
-import './App.css';
 import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider,Theme } from "@mui/material/styles";
 import Navbar from "./components/nav-section/Navbar";
-import { Box, Container, Toolbar, Typography } from '@mui/material';
+import { Box, Toolbar } from '@mui/material';
 import Home from './pages/Home';
 import Explore from './pages/Explore';
 import MyContribution from './pages/MyContribution';
@@ -15,6 +14,7 @@ const mdTheme = createTheme({
     mode: "dark",
   },
 });
+
 
 
 function App() {
@@ -43,7 +43,6 @@ function App() {
           </Routes>
           </Fragment>
           </Router>
-         
         </Box>
       </Box>
       </ThemeProvider>

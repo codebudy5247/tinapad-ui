@@ -18,7 +18,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
           easing: theme.transitions.easing.sharp,
           duration: theme.transitions.duration.enteringScreen,
         }),
-        backgroundColor:"black",
+        // backgroundColor:"#111317",
         color:"white",
         boxSizing: 'border-box',
         ...(!open && {

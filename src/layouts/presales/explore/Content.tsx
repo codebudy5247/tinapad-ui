@@ -7,6 +7,8 @@ import AllPresale from "./AllPresale";
 import MyContribution from "./MyContribution";
 import MyFavourite from "./MyFavourite";
 import MyCreatedPresales from "./MyCreatedPresales";
+import Pagination from '@mui/material/Pagination';
+
 
 const Content = () => {
   const [quickView, setQuickView] = useState(true);
@@ -84,13 +86,15 @@ const Content = () => {
       </Box>
       <Filter />
 
-      <Box sx={{ mt: 2 }}>
+      <Box sx={{mb:10}}>
         {quickView ? <QuickView /> : <></>}
         {allPresale ? <AllPresale /> : <></>}
         {contribution ? <MyContribution /> : <></>}
         {favourite ? <MyFavourite /> : <></>}
         {createdPresales ? <MyCreatedPresales /> : <></>}
+        <Pagination count={50} sx={{mt:4}} />
       </Box>
+
     </Box>
   );
 };
