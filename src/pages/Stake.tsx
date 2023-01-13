@@ -3,9 +3,10 @@ import { ButtonBase, Box, FormGroup, FormLabel, TextField, Typography } from '@m
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
 import FormControl from '@mui/material/FormControl';
-import StakeTab from './StakeTab';
-import UnstakeTab from './UnstakeTab';
-import Header from '../../common/Header';
+import StakeTab from '../layouts/Utility&Tools/Stake/StakeTab';
+import UnstakeTab from '../layouts/Utility&Tools/Stake/UnstakeTab';
+import Header from '../layouts/common/Header';
+
 
 const Stake = () => {
     const [opentab, setOpentab] = useState('Stake')

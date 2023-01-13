@@ -8,7 +8,9 @@ import { ColorButton } from "../../components/Button";
 const Header = () => {
   return (
     <Box sx={{ display: "flex", justifyContent: "space-around", position: 'relative', top: "-2rem" }}>
-      <Box> <SearchBar /> </Box>
+      <Box>
+        <SearchBar/>
+      </Box>
       <Stack direction="row" spacing={2}>
         <ColorButton variant="contained" startIcon={<AddCircleIcon />}>
           Create

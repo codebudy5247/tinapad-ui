@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, FormControl, FormGroup, FormLabel, TextField } from '@mui/material'
-import Header from '../common/Header'
+import Header from '../layouts/common/Header';
 
 
 const ManageAntiBot = () => {

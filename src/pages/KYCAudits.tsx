@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { Box } from '@mui/system'
-import Header from '../common/Header'
+import Header from '../layouts/common/Header'
 import Typography from '@mui/material/Typography'
-import Paragraph from '../../components/Paragraph'
-import Question from '../../components/Question'
-import { KycFAQ } from '../../_mocks/KycAuditFAQ'
+import Paragraph from '../components/Paragraph'
+import Question from '../components/Question'
+import { KycFAQ } from '../_mocks/KycAuditFAQ'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Image from '../../components/Image';
-import DEFI from '../../assets/DefiImg.png'
+import Image from '../components/Image';
+import DEFI from '../assets/DefiImg.png'
 import { Divider } from '@mui/material';
 
 

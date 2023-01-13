@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { FormControl, FormGroup, FormLabel, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import Bitcoinimg from '../../assets/Bitcoin.png';
-import Image from '../../components/Image';
-import Header from '../common/Header';
+import Bitcoinimg from '../assets/Bitcoin.png';
+import Image from '../components/Image';
+import Header from '../layouts/common/Header';
+
 
 const TokenLock = () => {
     const [opentab, setOpentab] = useState('All')

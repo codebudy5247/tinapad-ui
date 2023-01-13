@@ -1,10 +1,10 @@
 import Box from '@mui/material/Box'
 import React from 'react'
-import Header from '../common/Header'
+import Header from '../layouts/common/Header'
 import Typography from '@mui/material/Typography'
-import Paragraph from '../../components/Paragraph'
-import Image from '../../components/Image'
-import DocImg from '../../assets/DocImg.png'
+import Paragraph from '../components/Paragraph'
+import Image from '../components/Image'
+import DocImg from '../assets/DocImg.png'
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Divider } from '@mui/material'

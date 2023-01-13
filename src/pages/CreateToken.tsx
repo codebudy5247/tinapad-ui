@@ -8,8 +8,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 // import { ColorButton } from '../../../components/Button';
 import CalendarIcon from '../../../assets/CalendarIcon.png'
-import { ColorButton } from '../../components/Button';
-import Header from '../common/Header';
+import { ColorButton } from '../components/Button';
+import Header from '../layouts/common/Header';
 
 
 const CreateToken = () => {

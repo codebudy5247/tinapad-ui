@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { ButtonBase, Box, FormGroup, FormLabel, TextField, Typography } from '@mui/material'
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
-import AirdropTokens from './AirdropTokens';
-import AirdropETH from './AirdropETH';
+import AirdropTokens from '../layouts/Utility&Tools/Airdrop/AirdropTokens';
+import AirdropETH from '../layouts/Utility&Tools/Airdrop/AirdropETH';
 import FormControl from '@mui/material/FormControl';
-import Header from '../../common/Header';
+import Header from '../layouts/common/Header';
 
 const Airdrop = () => {
     const [opentab, setOpentab] = useState('Tokens')
