@@ -1,7 +1,5 @@
 import { List, Stack, Toolbar } from "@mui/material";
 import { useState } from "react";
-import colorConfigs from "../../configs/colorConfigs";
-import sizeConfigs from "../../configs/sizeConfigs";
 import appRoutes from "../../routes/appRoutes";
 import SidebarItem from "./SidebarItem";
 import SidebarItemCollapse from "./SidebarItemCollapse";
@@ -26,17 +24,6 @@ const Sidebar = () => {
     <Drawer
       variant="permanent"
       open={open}
-      // sx={{
-      //   width: sizeConfigs.sidebar.width,
-      //   flexShrink: 0,
-      //   "& .MuiDrawer-paper": {
-      //     width: sizeConfigs.sidebar.width,
-      //     boxSizing: "border-box",
-      //     borderRight: "0px",
-      //     backgroundColor: colorConfigs.sidebar.bg,
-      //     color: colorConfigs.sidebar.color,
-      //   },
-      // }}
     >
       <Toolbar
         sx={{

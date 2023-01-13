@@ -11,8 +11,29 @@ import FairProjectInform from './FairProjectInform';
 import FairSubmit from './FairSubmit';
 
 const FairStepper = () => {
-  const steps = ['Approve Token', 'Presale Information', 'Project Information', 'Submit'];
-  const stepsPara = ['Enter the token address and approve', 'Enter the Presale information, in case of trouble check our Docs', 'Add project links, description and select tier', 'Submit your presale'];
+  const steps = [
+    {
+      id: 1,
+      label: "Approve Token",
+      subLable: "Enter the token address and approve",
+    },
+    {
+      id: 2,
+      label: "Presale Information",
+      subLable:
+        "Enter the Presale information, in case of trouble check our Docs",
+    },
+    {
+      id: 3,
+      label: "Project Information",
+      subLable: "Add project links, description and select tie",
+    },
+    {
+      id: 4,
+      label: "Submit",
+      subLable: "Submit your presale",
+    },
+  ];
 
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState<{ [k: number]: boolean; }>({});
@@ -41,22 +62,33 @@ const FairStepper = () => {
   return (
     <Box sx={{ width: '100%', my: '3rem' }}>
       <Stepper nonLinear activeStep={activeStep} alternativeLabel>
-        {steps.map((label, index) => (
-          <Step key={label} completed={completed[index]}>
-            <StepButton color="" onClick={handleStep(index)}>
-              {label}
+      {steps.map((o, index) => (
+          <Step key={o.id} completed={completed[index]}>
+            <StepButton onClick={handleStep(index)}>
+              <Typography
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "16px",
+                  lineHeight: "19px",
+                }}
+              >
+                {o?.label}
+              </Typography>
+              <br />
+              <Typography
+                sx={{
+                  fontWeight: "400",
+                  fontSize: "10px",
+                  lineHeight: "12px",
+                  opacity: 0.8,
+                }}
+              >
+                {o?.subLable}
+              </Typography>
             </StepButton>
           </Step>
         ))}
       </Stepper>
-      {/* <Typography component="p" style={{ fontWeight: '400', fontSize: '10px' }} >
-      {stepsPara[index]}
-      </Typography> */}
-      {/* <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-       <Typography variant="h4" style={{ fontWeight: '600', fontSize: '16px', marginTop: '0.8rem' }}>
-         {label}
-       </Typography>
-     </Box> */}
       <Box>
         {allStepsCompleted() ? (
           <React.Fragment>
