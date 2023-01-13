@@ -1,7 +1,7 @@
 import React from 'react'
 import { DateTimePicker } from '@mui/lab';
 import { Box, FormControl, FormGroup, FormLabel, TextField, Typography } from '@mui/material'
-import { ColorButton } from '../../components/Button';
+import { ColorButton } from '../components/Button';
 // import dayjs, { Dayjs } from 'dayjs';
 
 const CreateLock = () => {

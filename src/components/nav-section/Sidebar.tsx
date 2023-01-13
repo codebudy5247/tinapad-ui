@@ -81,7 +81,7 @@ const Sidebar = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-            //   mt: "20%",
+              mt: "10%",
             }}
           >
             <SocialsButton />

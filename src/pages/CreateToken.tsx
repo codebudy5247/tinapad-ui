@@ -8,7 +8,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 // import { ColorButton } from '../../../components/Button';
 import CalendarIcon from '../../../assets/CalendarIcon.png'
-import { ColorButton } from '../../components/Button';
+import { ColorButton } from '../components/Button';
 
 
 const CreateToken = () => {

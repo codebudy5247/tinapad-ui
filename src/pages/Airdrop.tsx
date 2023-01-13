@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { ButtonBase, Box, FormGroup, FormLabel, TextField, Typography } from '@mui/material'
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
+import AirdropTokens from '../layouts/Utility&Tools/Airdrop/AirdropTokens';
+import AirdropETH from '../layouts/Utility&Tools/Airdrop/AirdropETH';
 import FormControl from '@mui/material/FormControl';
-import StakeTab from './StakeTab';
-import UnstakeTab from './UnstakeTab';
 
-const Stake = () => {
-    const [opentab, setOpentab] = useState('Stake')
+const Airdrop = () => {
+    const [opentab, setOpentab] = useState('Tokens')
 
     const IOSSwitch = styled((props: SwitchProps) => (
         <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -59,32 +59,31 @@ const Stake = () => {
             }),
         },
     }));
-
     return (
-        <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', py: '5%', px: '4.5%', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
-            <FormControl sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left' }}>TinaPad’s Staking Vault
+        <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', padding: '5%', pb: '1rem', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
+            <FormControl sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+                <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left' }}>Airdrop Tokens
                 </FormLabel>
                 <Box sx={{ display: 'flex', columnGap: '5%' }}>
-                    <ButtonBase onClick={() => { setOpentab('Stake') }}
+                    <ButtonBase onClick={() => { setOpentab('Tokens') }}
                         sx={{
                             fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
                             borderRadius: '12px', padding: '0.5rem',
-                            bgcolor: `${opentab === 'Stake' ? "#F20CEC" : ""}`,
-                        }}>Stake</ButtonBase>
-                    <ButtonBase onClick={() => { setOpentab('Unstake') }}
+                            bgcolor: `${opentab === 'Tokens' ? "#F20CEC" : ""}`,
+                        }}>Tokens</ButtonBase>
+                    <ButtonBase onClick={() => { setOpentab('ETH') }}
                         sx={{
                             fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
                             borderRadius: '12px', padding: '0.5rem',
-                            bgcolor: `${opentab === 'Unstake' ? "#F20CEC" : ""}`
-                        }}>Unstake</ButtonBase>
+                            bgcolor: `${opentab === 'ETH' ? "#F20CEC" : ""}`
+                        }}>ETH</ButtonBase>
                 </Box>
             </FormControl>
             {
-                opentab === 'Stake' ? <StakeTab /> : opentab === 'Unstake' ? <UnstakeTab /> : ''
+                opentab === 'Tokens' ? <AirdropTokens /> : opentab === 'ETH' ? <AirdropETH /> : ''
             }
         </Box>
     )
 }
 
-export default Stake
+export default Airdrop
