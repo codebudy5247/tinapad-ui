@@ -1,4 +1,4 @@
-import { Drawer, List, Stack, Toolbar } from "@mui/material";
+import { List, Stack, Toolbar } from "@mui/material";
 import { useState } from "react";
 import colorConfigs from "../../configs/colorConfigs";
 import sizeConfigs from "../../configs/sizeConfigs";
@@ -15,6 +15,7 @@ import LogoImg from "../../assets/logo.png";
 import Image from "../Image";
 import { Box } from "@mui/material";
 import SocialsButton from "../SocialsButtons";
+import Drawer from "./Drawer";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
@@ -25,17 +26,17 @@ const Sidebar = () => {
     <Drawer
       variant="permanent"
       open={open}
-      sx={{
-        width: sizeConfigs.sidebar.width,
-        flexShrink: 0,
-        "& .MuiDrawer-paper": {
-          width: sizeConfigs.sidebar.width,
-          boxSizing: "border-box",
-          borderRight: "0px",
-          backgroundColor: colorConfigs.sidebar.bg,
-          color: colorConfigs.sidebar.color,
-        },
-      }}
+      // sx={{
+      //   width: sizeConfigs.sidebar.width,
+      //   flexShrink: 0,
+      //   "& .MuiDrawer-paper": {
+      //     width: sizeConfigs.sidebar.width,
+      //     boxSizing: "border-box",
+      //     borderRight: "0px",
+      //     backgroundColor: colorConfigs.sidebar.bg,
+      //     color: colorConfigs.sidebar.color,
+      //   },
+      // }}
     >
       <Toolbar
         sx={{
@@ -50,23 +51,23 @@ const Sidebar = () => {
         </IconButton>
       </Toolbar>
       <List disablePadding>
-        <Toolbar sx={{ marginBottom: "20px" }}>
-          <ListItemButton>
-            <ListItemIcon sx={{ color: "white" }}>
-              <Image
-                disabledEffect
-                visibleByDefault
-                alt="empty content"
-                src={LogoImg}
-                sx={{ height: 30, color: "black" }}
-              />
-            </ListItemIcon>
-            <Box>
-              <ListItemText primary="Tina" />
-              <ListItemText primary="LaunchPad" />
-            </Box>
-          </ListItemButton>
-        </Toolbar>
+        {/* Logo */}
+        <ListItemButton>
+          <ListItemIcon sx={{ color: "white" }}>
+            <Image
+              disabledEffect
+              visibleByDefault
+              alt="empty content"
+              src={LogoImg}
+              sx={{ height: 30, color: "black" }}
+            />
+          </ListItemIcon>
+          <Box>
+            <ListItemText primary="Tina" />
+            <ListItemText primary="LaunchPad" />
+          </Box>
+        </ListItemButton>
+
         {appRoutes.map((route, index) =>
           route.sidebarProps ? (
             route.child ? (
@@ -76,16 +77,16 @@ const Sidebar = () => {
             )
           ) : null
         )}
-         <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              mt: "10%",
-            }}
-          >
-            <SocialsButton />
-          </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            mt: "10%",
+          }}
+        >
+          <SocialsButton />
+        </Box>
       </List>
     </Drawer>
   );

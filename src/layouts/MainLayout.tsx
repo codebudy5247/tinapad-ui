@@ -3,6 +3,7 @@ import { Box, Toolbar } from "@mui/material";
 import colorConfigs from "../configs/colorConfigs";
 import sizeConfigs from "../configs/sizeConfigs";
 import Sidebar from "../components/nav-section/Sidebar";
+import Navbar from "../components/nav-section/Navbar";
 const MainLayout = () => {
   return (
       <>
@@ -14,6 +15,7 @@ const MainLayout = () => {
         }}
       >
         <Sidebar />
+        {/* <Navbar /> */}
       </Box>
       <Box
         component="main"

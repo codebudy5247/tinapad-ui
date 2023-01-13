@@ -17,10 +17,11 @@ import KYCAudits from "../pages/KYCAudits";
 import Docs from "../pages/Docs";
 
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
-import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
-import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBulletedOutlined";
-import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import HomeIcon from '@mui/icons-material/Home';
+import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 
 const appRoutes: RouteType[] = [
@@ -36,7 +37,7 @@ const appRoutes: RouteType[] = [
     state: "home",
     sidebarProps: {
       displayText: "Home",
-      icon: <ArticleOutlinedIcon />,
+      icon: <HomeIcon />,
     },
   },
   //Presales
@@ -46,7 +47,7 @@ const appRoutes: RouteType[] = [
     state: "presales",
     sidebarProps: {
       displayText: "Presale",
-      icon: <DashboardOutlinedIcon />,
+      icon: <CrisisAlertIcon />,
     },
     child: [
       {
@@ -90,7 +91,7 @@ const appRoutes: RouteType[] = [
     state: "launchpad",
     sidebarProps: {
       displayText: "Launchpad",
-      icon: <DashboardOutlinedIcon />,
+      icon: <RocketLaunchIcon />,
     },
     child: [
       {
@@ -151,7 +152,7 @@ const appRoutes: RouteType[] = [
     state: "lock",
     sidebarProps: {
       displayText: "Lock",
-      icon: <DashboardOutlinedIcon />,
+      icon: <LockOpenIcon />,
     },
     child: [
       {
