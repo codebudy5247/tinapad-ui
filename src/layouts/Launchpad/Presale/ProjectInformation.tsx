@@ -61,13 +61,13 @@ const ProjectInformation = () => {
                 <fieldset style={{ display: 'flex', gap: '2%' }}>
                     <legend style={{ textAlign: 'left' }}>Select Tier</legend>
                     <Card sx={{
-                        display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: '#FFFFFF1A', width: '12rem', height: '12rem', borderRadius: '22px', cursor: 'pointer'
+                        display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: 'rgba(255, 255, 255, 0.1)', width: '12rem', height: '12rem', borderRadius: '22px', cursor: 'pointer'
                     }}>
-                        <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
+                        <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', height: '100%'}}>
                             <Typography sx={{ fontSize: '14px', fontWeight: '400' }} >
                                 Common Tier
                             </Typography>
-                            <Typography sx={{ fontSize: '14px', fontWeight: '400' }} >
+                            <Typography sx={{ fontSize: '14px', fontWeight: '400', textAlign: 'center', color: 'white' }} >
                                 Common Tier without any special Perks
                             </Typography>
                             <Typography sx={{ fontSize: 16, fontWeight: '700', color: '#F20CEC' }} >
@@ -75,7 +75,9 @@ const ProjectInformation = () => {
                             </Typography>
                         </CardContent>
                     </Card>
-                    <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: '#FFFFFF1A', width: '12rem', height: '12rem', borderRadius: '22px' }}>
+                    <Card sx={{
+                        display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: 'rgba(255, 255, 255, 0.1)', width: '12rem', height: '12rem', borderRadius: '22px'
+                    }}>
                         <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
                             <Typography sx={{ fontSize: '14px', fontWeight: '400' }} >
                                 Gold

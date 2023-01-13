@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import FormControl from '@mui/material/FormControl';
 import StakeTab from './StakeTab';
 import UnstakeTab from './UnstakeTab';
+import Header from '../../common/Header';
 
 const Stake = () => {
     const [opentab, setOpentab] = useState('Stake')
@@ -61,29 +62,32 @@ const Stake = () => {
     }));
 
     return (
-        <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', py: '5%', px: '4.5%', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
-            <FormControl sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left' }}>TinaPad’s Staking Vault
-                </FormLabel>
-                <Box sx={{ display: 'flex', columnGap: '5%' }}>
-                    <ButtonBase onClick={() => { setOpentab('Stake') }}
-                        sx={{
-                            fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
-                            borderRadius: '12px', padding: '0.5rem',
-                            bgcolor: `${opentab === 'Stake' ? "#F20CEC" : ""}`,
-                        }}>Stake</ButtonBase>
-                    <ButtonBase onClick={() => { setOpentab('Unstake') }}
-                        sx={{
-                            fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
-                            borderRadius: '12px', padding: '0.5rem',
-                            bgcolor: `${opentab === 'Unstake' ? "#F20CEC" : ""}`
-                        }}>Unstake</ButtonBase>
-                </Box>
-            </FormControl>
-            {
-                opentab === 'Stake' ? <StakeTab /> : opentab === 'Unstake' ? <UnstakeTab /> : ''
-            }
-        </Box>
+        <>
+            <Header />
+            <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', py: '5%', px: '4.5%', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
+                <FormControl sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left' }}>TinaPad’s Staking Vault
+                    </FormLabel>
+                    <Box sx={{ display: 'flex', columnGap: '5%' }}>
+                        <ButtonBase onClick={() => { setOpentab('Stake') }}
+                            sx={{
+                                fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
+                                borderRadius: '12px', padding: '0.5rem',
+                                bgcolor: `${opentab === 'Stake' ? "#F20CEC" : ""}`,
+                            }}>Stake</ButtonBase>
+                        <ButtonBase onClick={() => { setOpentab('Unstake') }}
+                            sx={{
+                                fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
+                                borderRadius: '12px', padding: '0.5rem',
+                                bgcolor: `${opentab === 'Unstake' ? "#F20CEC" : ""}`
+                            }}>Unstake</ButtonBase>
+                    </Box>
+                </FormControl>
+                {
+                    opentab === 'Stake' ? <StakeTab /> : opentab === 'Unstake' ? <UnstakeTab /> : ''
+                }
+            </Box>
+        </>
     )
 }
 

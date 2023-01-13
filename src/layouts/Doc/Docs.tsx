@@ -14,7 +14,7 @@ const Docs = () => {
     return (
         <>
             <Header />
-            <Box sx={{ padding: '5%', display: 'flex', flexDirection: 'column', rowGap: '2rem' }}>
+            <Box sx={{ py: '2%', px: '5%', display: 'flex', flexDirection: 'column', rowGap: '2rem' }}>
                 <Box sx={{ bgcolor: '#D9D9D9', height: '12rem', width: '100%' }}>Image</Box>
                 <Box sx={{ textAlign: 'left', px: '5%' }}>
                     <Box sx={{ mb: '4%' }}>

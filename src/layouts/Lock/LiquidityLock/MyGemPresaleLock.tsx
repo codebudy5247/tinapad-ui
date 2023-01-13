@@ -5,7 +5,7 @@ import FormLabel from '@mui/material/FormLabel';
 const MyGemPresaleLock = () => {
   return (
     <Box>
-      <Box sx={{ backgroundColor: '#1D1F23', width: '75%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', padding: '5%', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
+      <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', padding: '5%', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
         <Box display="flex" columnGap="2%">
           <Box display="flex" flexDirection="column" flex="1">
             <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left' }}>Lock Info</FormLabel>
@@ -40,7 +40,7 @@ const MyGemPresaleLock = () => {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ backgroundColor: '#1D1F23', width: '75%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', boxSizing: 'border-box', padding: '5%', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
+      <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', boxSizing: 'border-box', padding: '5%', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
         <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left', mb: '1rem' }}>Lock Record</FormLabel>
         <Box>
           <Box sx={{ display: 'flex', color: 'white', justifyContent: 'space-between', mb: '4%' }}>

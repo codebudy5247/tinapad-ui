@@ -60,29 +60,29 @@ const AirdropETH = () => {
 
   return (
     <FormControl>
-      <FormLabel sx={{ fontWeight: '700', fontSize: '14px', color: '#FC9823', my: '2rem' }}>You have <Typography component="span" sx={{ fontWeight: '700', fontSize: '16px' }}>0.00149 BNB</Typography>
+      <FormLabel sx={{ fontWeight: '700', fontSize: '14px', color: '#FC9823', textAlign: 'center', my: '6%' }}>You have <Typography component="span" sx={{ fontWeight: '700', fontSize: '16px' }}>0.00149 BNB</Typography>
       </FormLabel>
-      <FormGroup>
+      <FormGroup sx={{ display: 'flex', flexDirection: 'column', rowGap: '1rem' }}>
         <FormGroup>
           <FormControlLabel
             control={<IOSSwitch sx={{ m: 1 }} defaultChecked color="warning" />}
             label="Anti Sniper Protection"
           />
         </FormGroup>
-        <FormGroup sx={{ my: '2rem', display: 'flex', flexDirection: 'column', rowGap: '1rem' }}>
+        <FormGroup sx={{ display: 'flex', flexDirection: 'column', rowGap: '1.2rem' }}>
           <TextField id="outlined-required"
             label="Token or LP Token Adress"
             defaultValue="0xeE32AefeB41678d750FD794B11403b0d3113509B"
           />
           <TextField
             id="outlined-multiline-static"
-            label="Multiline"
+            label="Address List"
             multiline
             rows={3}
             defaultValue="Default Value"
           />
         </FormGroup>
-        <ColorButton sx={{ width: 'fit-content', mx: 'auto', px: '8%', mt: '3%' }}>OK</ColorButton>
+        <ColorButton sx={{ width: 'fit-content', mx: 'auto', px: '8%', my: '5%' }}>OK</ColorButton>
       </FormGroup>
     </FormControl>
   )

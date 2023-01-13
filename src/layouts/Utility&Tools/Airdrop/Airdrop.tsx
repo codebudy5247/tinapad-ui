@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import AirdropTokens from './AirdropTokens';
 import AirdropETH from './AirdropETH';
 import FormControl from '@mui/material/FormControl';
+import Header from '../../common/Header';
 
 const Airdrop = () => {
     const [opentab, setOpentab] = useState('Tokens')
@@ -60,29 +61,33 @@ const Airdrop = () => {
         },
     }));
     return (
-        <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', padding: '5%', pb: '1rem', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
-            <FormControl sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left' }}>Airdrop Tokens
-                </FormLabel>
-                <Box sx={{ display: 'flex', columnGap: '5%' }}>
-                    <ButtonBase onClick={() => { setOpentab('Tokens') }}
-                        sx={{
-                            fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
-                            borderRadius: '12px', padding: '0.5rem',
-                            bgcolor: `${opentab === 'Tokens' ? "#F20CEC" : ""}`,
-                        }}>Tokens</ButtonBase>
-                    <ButtonBase onClick={() => { setOpentab('ETH') }}
-                        sx={{
-                            fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
-                            borderRadius: '12px', padding: '0.5rem',
-                            bgcolor: `${opentab === 'ETH' ? "#F20CEC" : ""}`
-                        }}>ETH</ButtonBase>
-                </Box>
-            </FormControl>
-            {
-                opentab === 'Tokens' ? <AirdropTokens /> : opentab === 'ETH' ? <AirdropETH /> : ''
-            }
-        </Box>
+        <>
+            <Header />
+            <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column'
+            , boxSizing: 'border-box', padding: '5%', pb: '1rem', borderRadius: '20px', marginTop: '2rem' }}>
+                <FormControl sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left' }}>Airdrop Tokens
+                    </FormLabel>
+                    <Box sx={{ display: 'flex', columnGap: '5%' }}>
+                        <ButtonBase onClick={() => { setOpentab('Tokens') }}
+                            sx={{
+                                fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
+                                borderRadius: '12px', padding: '0.5rem',
+                                bgcolor: `${opentab === 'Tokens' ? "#F20CEC" : ""}`,
+                            }}>Tokens</ButtonBase>
+                        <ButtonBase onClick={() => { setOpentab('ETH') }}
+                            sx={{
+                                fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
+                                borderRadius: '12px', padding: '0.5rem',
+                                bgcolor: `${opentab === 'ETH' ? "#F20CEC" : ""}`
+                            }}>ETH</ButtonBase>
+                    </Box>
+                </FormControl>
+                {
+                    opentab === 'Tokens' ? <AirdropTokens /> : opentab === 'ETH' ? <AirdropETH /> : ''
+                }
+            </Box>
+        </>
     )
 }
 

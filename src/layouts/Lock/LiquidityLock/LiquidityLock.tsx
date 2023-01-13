@@ -47,8 +47,10 @@ const LiquidityLock = () => {
   return (
     <>
       <Header />
-      <Box sx={{ backgroundColor: `${gemPresaleLock || otherLiqLock === true? '#1D1F23' : ''}`, width: '92%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', padding: '5%', pb: '1.2rem', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
-        <TextField label="Search by LP Adress" fullWidth></TextField>
+      <Box sx={{ backgroundColor: `${gemPresaleLock || otherLiqLock === true ? '#1D1F23' : ''}`, width: '92%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', padding: '5%', pb: '1.2rem', borderRadius: '20px'}}>
+        {
+          gemPresaleLock || otherLiqLock === true ? <TextField label="Search by LP Adress" autoFocus fullWidth /> : ''
+        }
         <Box>
           <Box sx={{ display: "flex", justifyContent: "end", alignItems: "center", gap: 2, }}>
             <ColorButton onClick={onClickGemPresaleLockTab} variant="contained"
@@ -81,7 +83,7 @@ const LiquidityLock = () => {
             </ColorButton>
           </Box>
 
-          <Box sx={{ mt: 2 }}>
+          <Box sx={{ }}>
             {gemPresaleLock ? <GemPresaleLock /> : <></>}
             {otherLiqLock ? <OtherLiqLock /> : <></>}
             {myOtherLiqlocks ? <MyOtherLiqlocks /> : <></>}

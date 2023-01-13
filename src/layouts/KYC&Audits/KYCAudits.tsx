@@ -18,7 +18,7 @@ const KYCAudits = () => {
   return (
     <>
       <Header />
-      <Box sx={{ padding: '5%', display: 'flex', flexDirection: 'column', rowGap: '2rem' }}>
+      <Box sx={{ py: '2%', px: '5%', display: 'flex', flexDirection: 'column', rowGap: '2rem' }}>
         <Box sx={{ bgcolor: '#D9D9D9', height: '12rem', width: '100%' }}>Image</Box>
         <Box sx={{ textAlign: 'left', px: '5%' }}>
           <Box sx={{ mb: '4%' }}>
@@ -59,7 +59,7 @@ const KYCAudits = () => {
                 <Paragraph sx={{ fontWeight: '600', fontSize: '16px', color: 'white' }}>Finalize a  presale</Paragraph>
               </Box>
             </Button>
-            <Button variant="outlined" endIcon={<ArrowForwardIcon />} sx={{ width: "100%", display: 'flex', justifyContent: 'space-between', border: '0.2px solid #B8B5B5', color: '#838181'}}>
+            <Button variant="outlined" endIcon={<ArrowForwardIcon />} sx={{ width: "100%", display: 'flex', justifyContent: 'space-between', border: '0.2px solid #B8B5B5', color: '#838181' }}>
               <Box sx={{ textAlign: 'left' }}>
                 <Paragraph sx={{ fontWeight: '400', fontSize: '12px', color: 'white', opacity: '0.5' }}>Next-guide for project owners-previous</Paragraph>
                 <Paragraph sx={{ fontWeight: '600', fontSize: '16px', color: 'white' }}>Telegram but bot</Paragraph>
@@ -68,12 +68,12 @@ const KYCAudits = () => {
           </Stack>
           <Box sx={{}}>
             <Divider />
-            <Paragraph sx={{ opacity: '0.5', mt: '2%'}}>Last modified 19d ago</Paragraph>
+            <Paragraph sx={{ opacity: '0.5', mt: '2%' }}>Last modified 19d ago</Paragraph>
           </Box>
         </Box>
       </Box>
     </>
   )
-} 
+}
 
 export default KYCAudits

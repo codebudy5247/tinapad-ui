@@ -60,7 +60,7 @@ const AirdropTokens = () => {
   }));
   return (
 
-    <FormControl sx={{ width: '100%' }}>
+    <FormControl sx={{ width: '100%',mt: '5%' }}>
       <TextField id="outlined-required"
         label="Token or LP Token Adress"
         defaultValue="0xeE32AefeB41678d750FD794B11403b0d3113509B"
