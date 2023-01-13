@@ -1,14 +1,13 @@
-import './App.css';
 import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { createTheme, ThemeProvider,Theme } from "@mui/material/styles";
 import Navbar from "./components/nav-section/Navbar";
-import { Box, Container, Toolbar, Typography } from '@mui/material';
+import { Box, Toolbar } from '@mui/material';
 import Home from './pages/Home';
 import Explore from './pages/Explore';
 import MyContribution from './pages/MyContribution';
 import MyAlarm from './pages/MyAlarm';
 import CreatePreasale from './pages/CreatePreasale';
-import { createTheme, ThemeProvider } from '@mui/material';
 import CreateHyperLaunch from './pages/CreateHyperLaunch';
 import CreateFairLaunch from './pages/CreateFairLaunch';
 import CreateLock from './layouts/Lock/CreateLock';
@@ -37,6 +36,7 @@ const mdTheme = createTheme({
     mode: "dark",
   },
 });
+
 
 
 function App() {

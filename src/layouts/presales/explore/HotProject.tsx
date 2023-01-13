@@ -70,11 +70,21 @@ const HotProject = () => {
               gap: 5,
               justifyContent: "center",
               alignItems: "center",
-              cursor:'pointer'
+              cursor: "pointer",
             }}
           >
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              <Box sx={{ ...commonStyles, borderRadius: "50%" }}>1</Box>
+              <Box
+                sx={{
+                  ...commonStyles,
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                1
+              </Box>
               <Typography
                 sx={{
                   fontWeight: 600,
@@ -99,7 +109,17 @@ const HotProject = () => {
             </Box>
 
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              <Box sx={{ ...commonStyles, borderRadius: "50%" }}>2</Box>
+              <Box
+                sx={{
+                  ...commonStyles,
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                2
+              </Box>
               <Typography
                 sx={{
                   fontWeight: 600,
@@ -124,7 +144,17 @@ const HotProject = () => {
             </Box>
 
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              <Box sx={{ ...commonStyles, borderRadius: "50%" }}>3</Box>
+              <Box
+                sx={{
+                  ...commonStyles,
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                3
+              </Box>
               <Typography
                 sx={{
                   fontWeight: 600,
@@ -149,7 +179,17 @@ const HotProject = () => {
             </Box>
 
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              <Box sx={{ ...commonStyles, borderRadius: "50%" }}>4</Box>
+              <Box
+                sx={{
+                  ...commonStyles,
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                4
+              </Box>
               <Typography
                 sx={{
                   fontWeight: 600,
@@ -174,7 +214,17 @@ const HotProject = () => {
             </Box>
 
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              <Box sx={{ ...commonStyles, borderRadius: "50%" }}>5</Box>
+              <Box
+                sx={{
+                  ...commonStyles,
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                5
+              </Box>
               <Typography
                 sx={{
                   fontWeight: 600,
@@ -199,7 +249,17 @@ const HotProject = () => {
             </Box>
 
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              <Box sx={{ ...commonStyles, borderRadius: "50%" }}>6</Box>
+              <Box
+                sx={{
+                  ...commonStyles,
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                6
+              </Box>
               <Typography
                 sx={{
                   fontWeight: 600,
@@ -224,7 +284,17 @@ const HotProject = () => {
             </Box>
 
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              <Box sx={{ ...commonStyles, borderRadius: "50%" }}>7</Box>
+              <Box
+                sx={{
+                  ...commonStyles,
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                7
+              </Box>
               <Typography
                 sx={{
                   fontWeight: 600,
@@ -249,7 +319,17 @@ const HotProject = () => {
             </Box>
 
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              <Box sx={{ ...commonStyles, borderRadius: "50%" }}>8</Box>
+              <Box
+                sx={{
+                  ...commonStyles,
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                8
+              </Box>
               <Typography
                 sx={{
                   fontWeight: 600,
