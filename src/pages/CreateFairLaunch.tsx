@@ -1,15 +1,15 @@
 import { Container } from "@mui/system";
 import React from "react";
 import Header from "../layouts/common/Header";
-import StepForm from "../layouts/Launchpad/Presale/ApproveToken";
+import FairStepper from "../layouts/Launchpad/FairLaunch/FairStepper";
 
-const CreatePreasale = () => {
+const CreateFairLaunch = () => {
   return (
     <Container maxWidth="xl">
       <Header />
-      <StepForm />
+      <FairStepper/>
     </Container>
   )
 }
 
-export default CreatePreasale
+export default CreateFairLaunch
