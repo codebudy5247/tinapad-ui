@@ -17,11 +17,12 @@ import KYCAudits from "../pages/KYCAudits";
 import Docs from "../pages/Docs";
 
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
-import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 import HomeIcon from '@mui/icons-material/Home';
 import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+import ArticleIcon from '@mui/icons-material/Article';
+import BorderAllIcon from '@mui/icons-material/BorderAll';
 
 
 const appRoutes: RouteType[] = [
@@ -115,7 +116,7 @@ const appRoutes: RouteType[] = [
         element: <CreateFairLaunch />,
         state: "launchpad.create-fairlaunch",
         sidebarProps: {
-          displayText: "Create Hyper Launch",
+          displayText: "Create Fair Launch",
         },
       },
       {
@@ -248,7 +249,7 @@ const appRoutes: RouteType[] = [
     state: "presale-alerts",
     sidebarProps: {
       displayText: "Presale Alerts",
-      icon: <DashboardOutlinedIcon />,
+      icon: <CrisisAlertIcon />,
     },
   },
   //KYC && Audits
@@ -258,7 +259,7 @@ const appRoutes: RouteType[] = [
     state: "kyc-audits",
     sidebarProps: {
       displayText: "KYC & Audits",
-      icon: <DashboardOutlinedIcon />,
+      icon: <BorderAllIcon />,
     },
   },
   //Docs
@@ -268,7 +269,7 @@ const appRoutes: RouteType[] = [
     state: "docs",
     sidebarProps: {
       displayText: "Docs",
-      icon: <DashboardOutlinedIcon />,
+      icon: <ArticleIcon />,
     },
   }
 ];

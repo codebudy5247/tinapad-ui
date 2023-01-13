@@ -2,7 +2,7 @@ import { styled} from '@mui/material/styles';
 import MuiDrawer from '@mui/material/Drawer';
 import { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 
-const drawerWidth: number = 280;
+const drawerWidth: string = 'fix-layout';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -18,7 +18,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
           easing: theme.transitions.easing.sharp,
           duration: theme.transitions.duration.enteringScreen,
         }),
-        // backgroundColor:"#111317",
         color:"white",
         boxSizing: 'border-box',
         ...(!open && {
