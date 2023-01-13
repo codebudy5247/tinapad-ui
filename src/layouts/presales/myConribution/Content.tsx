@@ -8,17 +8,19 @@ import SocialsButton from "../../../components/SocialsButtons";
 import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
 import WhitelistTimer from "./WhitelistTimer";
-import { grey} from '@mui/material/colors';
+import { grey } from "@mui/material/colors";
 import WhiteListSale from "./WhiteListSale";
+import DexListingTimer from "./DexListingTimer";
+import Tokenomix from "./Tokenomix";
 
 const Content = () => (
   <Grid container spacing={2}>
     <Grid item xs={12} md={8} sx={{ mb: 5, mt: 4 }}>
       <Box
         sx={{
-            backgroundColor:grey[900],
-        //   backgroundImage: `url(${BackgroundImg})`,
-        //   backgroundRepeat: "no-repeat",
+          backgroundColor: grey[900],
+          //   backgroundImage: `url(${BackgroundImg})`,
+          //   backgroundRepeat: "no-repeat",
           width: "fix-layout",
           height: "fix-layout",
           borderRadius: "25px",
@@ -492,6 +494,8 @@ const Content = () => (
     <Grid item xs={12} md={4} sx={{ mb: 5, mt: 4 }}>
       <WhitelistTimer />
       <WhiteListSale />
+      <DexListingTimer />
+      <Tokenomix />
     </Grid>
   </Grid>
 );
