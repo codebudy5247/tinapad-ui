@@ -9,9 +9,9 @@ const LaunchPadStatisticsCard = (props: any) => {
       sx={{
         backgroundImage: `url(${props?.launchpad?.backgroundImg})`,
         backgroundRepeat: "no-repeat",
-        width: "265px",
+        width: {xs:"135px",sm:"265px"},
         height: "177px",
-        borderRadius: "10px",
+        borderRadius: {xs:"25px",sm:"10px"},
         paddingLeft: 2,
         paddingTop: 2,
       }}
@@ -29,7 +29,6 @@ const LaunchPadStatisticsCard = (props: any) => {
         {props?.launchpad?.title}
       </Typography>
       <Box sx={{ display: "flex" }}>
-        {/* <Iconify icon={props?.launchpad?.icon} height={10} width={10} /> */}
         <Typography
           sx={{
             fontWeight: 600,

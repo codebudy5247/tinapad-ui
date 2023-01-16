@@ -11,26 +11,24 @@ const LaunchPad = () => {
     <>
       <Box
         sx={{
-          display: "flex",
+          display: { sm: "flex" },
           justifyContent: "space-between",
-          mt: 8,
-          paddingLeft: 3,
-          paddingRight: 3,
+          mt: { xs: 4, sm: 8 },
+          paddingLeft: { sm: 3 },
+          paddingRight: { sm: 3 },
         }}
       >
-        <Box>
+        <Box sx={{ width: { xs: "100%" } }}>
           <Typography
             variant="h4"
             sx={{
-              fontWeight: 600,
-              fontSize: "52px",
-              lineHeight: "78px",
+              fontWeight: { xs: 400, sm: 600 },
+              fontSize: { xs: "42px", sm: "52px" },
+              lineHeight: { xs: "52px", sm: "78px" },
               backgroundClip: "text",
-              // WebkitTextFillColor: "transparent",
               color: "#715DEC",
               textAlign: "start",
               fontStyle: "normal",
-              // fontFamily:'Poppins'
             }}
           >
             The Launchpad
@@ -38,22 +36,32 @@ const LaunchPad = () => {
           <Typography
             variant="h4"
             sx={{
-              fontWeight: 600,
-              fontSize: "52px",
-              lineHeight: "78px",
+              fontWeight: { xs: 400, sm: 600 },
+              fontSize: { xs: "42px", sm: "52px" },
+              lineHeight: { xs: "52px", sm: "78px" },
               backgroundClip: "text",
-              // WebkitTextFillColor: "transparent",
               color: "#FFFFFF",
               textAlign: "start",
               fontStyle: "normal",
-              // fontFamily:'Poppins'
             }}
           >
             Protocol for Everyone!
           </Typography>
         </Box>
-        <Box sx={{ width: "40%" }}>
-          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+        <Box
+          sx={{
+            width: { xs: "100%", sm: "40%" },
+            display: { xs: "flex" },
+            flexDirection: { xs: "column-reverse", sm: "column" },
+          }}
+        >
+          <Box
+            sx={{
+              // display: "flex",
+              justifyContent: { xs: "flex-start", sm: "flex-end" },
+              mt: { xs: 2 },
+            }}
+          >
             <ColorButton variant="contained" startIcon={<AddCircleIcon />}>
               Create Launchpad
             </ColorButton>
@@ -62,9 +70,9 @@ const LaunchPad = () => {
           <Typography
             variant="subtitle2"
             sx={{
-              fontWeight: 400,
-              fontSize: "18px",
-              lineHeight: "27px",
+              fontWeight: { xs: 400, sm: 400 },
+              fontSize: { xs: "14px", sm: "18px" },
+              lineHeight: { xs: "21px", sm: "27px" },
               color: "#FFFFFF",
               textAlign: "start",
               mt: 3,
@@ -77,21 +85,39 @@ const LaunchPad = () => {
           </Typography>
         </Box>
       </Box>
-      <Box sx={{ flexGrow: 1, mt: 5, paddingLeft: 4, mb: 2 }}>
-        <Grid container spacing={3}>
-          {_launchpad.map((data: any) => (
-            <Grid xs key={data.id}>
-              <LaunchPadCard launchpad={data} />
-            </Grid>
-          ))}
-        </Grid>
-        <Grid container spacing={3} sx={{ mt: 5 }}>
-          {_launchpadStatistics.map((data: any) => (
-            <Grid xs key={data.id}>
-              <LaunchPadStatisticsCard launchpad={data} />
-            </Grid>
-          ))}
-        </Grid>
+
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection:{xs:"column",sm:"row"},
+          mt: {sm:5,xs:2},
+          gap: { sm: 3, xs: 1 },
+          width: { xs: "100%" },
+          paddingLeft:{xs:2}
+        }}
+      >
+        {_launchpad.map((data: any) => (
+          <Box key={data.id}>
+            <LaunchPadCard launchpad={data} />
+          </Box>
+        ))}
+      </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          mt: 5,
+          gap: { sm: 3, xs: 1 },
+          flexWrap: { xs: "wrap" },
+          width: { xs: "100%" },
+          paddingLeft:{xs:2}
+        }}
+      >
+        {_launchpadStatistics.map((data: any) => (
+          <Box key={data.id}>
+            <LaunchPadStatisticsCard launchpad={data} />
+          </Box>
+        ))}
       </Box>
     </>
   );

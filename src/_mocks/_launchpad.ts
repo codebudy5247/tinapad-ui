@@ -100,7 +100,7 @@ export const _launchpadStatistics = [
   {
     id: "4",
     title: "Total Funds Raised",
-    value: "$18,429,936",
+    value: "$18,429",
     incrementValue: "40",
     image: totalFundRaisedImg,
     backgroundImg: stat4BackImg,

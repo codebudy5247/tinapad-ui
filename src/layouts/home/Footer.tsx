@@ -22,8 +22,8 @@ const Footer = () => {
         <Typography
           sx={{
             fontWeight: 600,
-            fontSize: "52px",
-            lineHeight: "78px",
+            fontSize:{xs:"42px",sm:"52px"},
+            lineHeight:{xs:"63px",sm:"78px"},
             color: "#FFFFFF",
             textAlign: "start",
             backgroundClip: "text",
@@ -34,8 +34,8 @@ const Footer = () => {
         <Typography
           sx={{
             fontWeight: 400,
-            fontSize: "18px",
-            lineHeight: "27px",
+            fontSize:{xs:"14px",sm:"18px"},
+            lineHeight:{xs:"21px",sm:"27px"},
             color: "#FFFFFF",
             textAlign: "start",
             // opacity:0.5
@@ -48,9 +48,11 @@ const Footer = () => {
       <Box
         sx={{
           display: "flex",
+          flexWrap:{xs:"wrap"},
+          gap:{xs:3},
           mt: 2,
           width: "100%",
-          justifyContent: "space-between",
+          justifyContent: {sm:"space-between"},
         }}
       >
         <Image
@@ -58,35 +60,35 @@ const Footer = () => {
           visibleByDefault
           alt="empty content"
           src={tokeroImg}
-          sx={{ height: 30 }}
+          sx={{ height: {xs:20,sm:30} }}
         />
         <Image
           disabledEffect
           visibleByDefault
           alt="empty content"
           src={rikkeiImg}
-          sx={{ height: 30 }}
+          sx={{  height: {xs:20,sm:30} }}
         />
         <Image
           disabledEffect
           visibleByDefault
           alt="empty content"
           src={elrondImg}
-          sx={{ height: 30 }}
+          sx={{  height: {xs:20,sm:30} }}
         />
         <Image
           disabledEffect
           visibleByDefault
           alt="empty content"
           src={codevixImg}
-          sx={{ height: 30 }}
+          sx={{  height: {xs:20,sm:30} }}
         />
         <Image
           disabledEffect
           visibleByDefault
           alt="empty content"
           src={copperImg}
-          sx={{ height: 30 }}
+          sx={{  height: {xs:20,sm:30} }}
         />
       </Box>
     </Box>
