@@ -82,8 +82,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -151,8 +151,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -220,8 +220,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -289,8 +289,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -358,8 +358,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -427,8 +427,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  ffontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -496,8 +496,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -565,8 +565,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -634,8 +634,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -703,8 +703,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
