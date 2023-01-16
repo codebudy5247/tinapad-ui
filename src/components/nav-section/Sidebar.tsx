@@ -14,6 +14,7 @@ import Image from "../Image";
 import { Box } from "@mui/material";
 import SocialsButton from "../SocialsButtons";
 import Drawer from "./Drawer";
+import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
@@ -21,10 +22,7 @@ const Sidebar = () => {
     setOpen(!open);
   };
   return (
-    <Drawer
-      variant="permanent"
-      open={open}
-    >
+    <Drawer variant="permanent" open={open}>
       <Toolbar
         sx={{
           display: "flex",
@@ -64,7 +62,7 @@ const Sidebar = () => {
             )
           ) : null
         )}
-        <Box
+        {/* <Box
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -73,7 +71,25 @@ const Sidebar = () => {
           }}
         >
           <SocialsButton />
-        </Box>
+        </Box> */}
+        <ListItemButton>
+          <ListItemIcon sx={{ color: "white" }}>
+            <SportsVolleyballIcon />
+          </ListItemIcon>
+          {/* <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            // mt: "10%",
+          }}
+        >
+          <SocialsButton />
+        </Box> */}
+          <Box>
+          <SocialsButton />
+          </Box>
+        </ListItemButton>
       </List>
     </Drawer>
   );
