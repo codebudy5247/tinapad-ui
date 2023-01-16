@@ -1,6 +1,6 @@
 import React from "react";
 import { _launchpad, _launchpadStatistics } from "../../_mocks/_launchpad";
-import { Box, Card, Grid, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { ColorButton } from "../../components/Button";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import LaunchPadCard from "./LaunchPadCard";
@@ -93,11 +93,11 @@ const LaunchPad = () => {
           mt: {sm:5,xs:2},
           gap: { sm: 3, xs: 1 },
           width: { xs: "100%" },
-          paddingLeft:{xs:2}
+          // paddingLeft:{xs:2}
         }}
       >
         {_launchpad.map((data: any) => (
-          <Box key={data.id}>
+          <Box key={data.id} sx={{}}>
             <LaunchPadCard launchpad={data} />
           </Box>
         ))}
@@ -110,7 +110,7 @@ const LaunchPad = () => {
           gap: { sm: 3, xs: 1 },
           flexWrap: { xs: "wrap" },
           width: { xs: "100%" },
-          paddingLeft:{xs:2}
+          // paddingLeft:{xs:2}
         }}
       >
         {_launchpadStatistics.map((data: any) => (

@@ -62,30 +62,11 @@ const Sidebar = () => {
             )
           ) : null
         )}
-        {/* <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            mt: "10%",
-          }}
-        >
-          <SocialsButton />
-        </Box> */}
-        <ListItemButton>
+
+        <ListItemButton sx={{ml:1}}>
           <ListItemIcon sx={{ color: "white" }}>
             <SportsVolleyballIcon />
           </ListItemIcon>
-          {/* <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            // mt: "10%",
-          }}
-        >
-          <SocialsButton />
-        </Box> */}
           <Box>
           <SocialsButton />
           </Box>

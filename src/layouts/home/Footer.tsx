@@ -49,7 +49,7 @@ const Footer = () => {
         sx={{
           display: "flex",
           flexWrap:{xs:"wrap"},
-          gap:{xs:3},
+          gap:{xs:1},
           mt: 2,
           width: "100%",
           justifyContent: {sm:"space-between"},
