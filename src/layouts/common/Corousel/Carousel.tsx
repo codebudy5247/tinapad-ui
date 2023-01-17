@@ -34,7 +34,7 @@ const CarouselComp = () => {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 2,
     },
   };
   return (
@@ -56,14 +56,15 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec1BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              gap:{xs:1}
             }}
           >
             <Box>
@@ -81,8 +82,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -125,10 +126,10 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec2BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
@@ -150,8 +151,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -194,10 +195,10 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec3BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
@@ -219,8 +220,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -263,10 +264,10 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec4BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
@@ -288,8 +289,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -332,10 +333,10 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec5BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
@@ -357,8 +358,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -401,10 +402,10 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec5BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
@@ -426,8 +427,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  ffontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -470,10 +471,10 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec5BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
@@ -495,8 +496,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -539,10 +540,10 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec5BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
@@ -564,8 +565,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -608,10 +609,10 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec5BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
@@ -633,8 +634,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",
@@ -677,10 +678,10 @@ const CarouselComp = () => {
             sx={{
               backgroundImage: `url(${rec5BackImg})`,
               backgroundRepeat: "no-repeat",
-              width: "220px",
-              height: "106px",
-              borderRadius: "10px",
-              p: 2,
+              width: {xs:"175px",sm:"220px"},
+              height: {sm:"106px",xs:"84px"},
+              borderRadius: {sm:"10px",xs:"25px"},
+              p: {sm:2,xs:1},
               mt: 4,
               display: "flex",
               justifyContent: "center",
@@ -702,8 +703,8 @@ const CarouselComp = () => {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "22px",
+                  fontSize: {sm:"18px",xs:"14px"},
+                  lineHeight: {sm:"22px",xs:"16px"},
                   textTransform: "capitalize",
                   color: "#FFFFFF",
                   textAlign: "start",

@@ -7,12 +7,13 @@ const LaunchPadCard = (props: any) => {
       sx={{
         backgroundImage: `url(${props?.launchpad?.backgroundImg})`,
         backgroundRepeat: "no-repeat",
-        width: "265px",
+        width: {sm:"265px",xs:"265px"},
         height: "177px",
         borderRadius: "10px",
         paddingLeft: 2,
         paddingTop: 2,
         // opacity:0.5
+        mt:{xs:1}
       }}
     >
       <Typography

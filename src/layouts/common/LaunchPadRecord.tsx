@@ -9,11 +9,12 @@ const LaunchPadRecord = () => {
           mt: 8,
           display: "flex",
           justifyContent: "space-between",
-          paddingLeft: { xs: '0', sm: '0', md: '1', lg: '3' },
-          paddingRight: { xs: '0', sm: '0', md: '1', lg: '3' },
+          paddingLeft: {xs:0,sm:3},
+          paddingRight:  {xs:0,sm:3},
+          width: { xs: "100%"}
         }}
       >
-        <Box>
+        <Box sx={{}}>
           <Typography
             sx={{
               fontWeight: 600,

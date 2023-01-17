@@ -1,17 +1,13 @@
-import React from "react";
-import Card from "@mui/material/Card";
 import { Box, CardActions, Typography } from "@mui/material";
-import Image from "../../components/Image";
-import Iconify from "../../components/Iconify";
 const LaunchPadStatisticsCard = (props: any) => {
   return (
     <Box
       sx={{
         backgroundImage: `url(${props?.launchpad?.backgroundImg})`,
         backgroundRepeat: "no-repeat",
-        width: "265px",
+        width: {xs:"125px",sm:"265px"},
         height: "177px",
-        borderRadius: "10px",
+        borderRadius: {xs:"25px",sm:"10px"},
         paddingLeft: 2,
         paddingTop: 2,
       }}
@@ -29,7 +25,6 @@ const LaunchPadStatisticsCard = (props: any) => {
         {props?.launchpad?.title}
       </Typography>
       <Box sx={{ display: "flex" }}>
-        {/* <Iconify icon={props?.launchpad?.icon} height={10} width={10} /> */}
         <Typography
           sx={{
             fontWeight: 600,
