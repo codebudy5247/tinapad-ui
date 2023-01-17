@@ -104,7 +104,7 @@ const AirdropTokens = () => {
           defaultValue="Default Value"
         />
       </FormGroup>
-      <ColorButton sx={{ width: 'fit-content', mx: 'auto', px: '8%', mt: '3%' }}>OK</ColorButton>
+      <ColorButton sx={{ width: 'fit-content', mx: 'auto', px: '8%', mt: '3%' }}>ok</ColorButton>
     </FormControl >
 
   )

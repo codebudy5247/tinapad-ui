@@ -11,6 +11,7 @@ const MyCreatedPresales = () => {
         textTransform: "capitalize",
         // color: "#FFFFFF",
         textAlign: "center",
+        mt: '2rem'
       }}
     >
      My Created Presales

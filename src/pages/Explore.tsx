@@ -7,7 +7,7 @@ import HotProject from "../layouts/presales/explore/HotProject";
 const Explore = () => {
   return (
     <Container maxWidth="xl">
-      <Header />
+      {/* <Header /> */}
       <LaunchPadRecord />
       <HotProject />
       <Content />

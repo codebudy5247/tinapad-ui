@@ -4,7 +4,8 @@ import React from 'react'
 
 const Paragraph = styled(Typography)<any>(({ theme }) => ({
     fontWeight: "400",
-    fontSize: "16px"
+    fontSize: "16px",
+    textTransform: "capitalize",
 }))
 
 export default Paragraph

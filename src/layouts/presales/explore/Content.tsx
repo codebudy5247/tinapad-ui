@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import Filter from "./Filter";
 import { ColorButton } from "../../../components/Button";
 import QuickView from "./QuickView";
@@ -59,40 +59,64 @@ const Content = () => {
 
   return (
     <Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 2,
-          mt: 2,
-        }}
-      >
-        <ColorButton onClick={onClickQuickViewTab} variant="contained">
+      <Divider />
+      <Box sx={{
+        width: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: { xs: '0.8rem', sm: '4%', md: '3%' },
+        mt: { xs: '6%', sm: '2%', lg: '1%' }
+      }}>
+        <ColorButton onClick={onClickQuickViewTab} variant="contained" sx={{
+          fontWeight: { xs: '100', sm: '300', md: '600', lg: '700' },
+          fontSize: '14px',
+          bgcolor: `${quickView === false ? 'transparent' : ''}`,
+          boxShadow: `${quickView === false ? 'none' : ''}`,
+        }}>
           Quick View
         </ColorButton>
-        <ColorButton onClick={onClickAllPresaleTab} variant="contained">
+        <ColorButton onClick={onClickAllPresaleTab} variant="contained" sx={{
+          fontWeight: { xs: '100', sm: '300', md: '600', lg: '700' },
+          fontSize: '14px',
+          bgcolor: `${allPresale === false ? 'transparent' : ''}`,
+          boxShadow: `${allPresale === false ? 'none' : ''}`,
+        }}>
           AllPresale
         </ColorButton>
-        <ColorButton onClick={onClickContributionTab} variant="contained">
+        <ColorButton onClick={onClickContributionTab} variant="contained" sx={{
+          fontWeight: { xs: '100', sm: '300', md: '600', lg: '700' },
+          fontSize: '14px',
+          bgcolor: `${contribution === false ? 'transparent' : ''}`,
+          boxShadow: `${contribution === false ? 'none' : ''}`,
+        }}>
           My Contribution
         </ColorButton>
-        <ColorButton onClick={onClickFavouriteTab} variant="contained">
+        <ColorButton onClick={onClickFavouriteTab} variant="contained" sx={{
+          fontWeight: { xs: '100', sm: '300', md: '600', lg: '700' },
+          fontSize: '14px',
+          bgcolor: `${favourite === false ? 'transparent' : ''}`,
+          boxShadow: `${favourite === false ? 'none' : ''}`,
+        }}>
           My Favorites
         </ColorButton>
-        <ColorButton onClick={onClickCreatePresaleTab} variant="contained">
+        <ColorButton onClick={onClickCreatePresaleTab} variant="contained" sx={{
+          fontWeight: { xs: '100', sm: '300', md: '600', lg: '700' },
+          fontSize: '14px',
+          bgcolor: `${createdPresales === false ? 'transparent' : ''}`,
+          boxShadow: `${createdPresales === false ? 'none' : ''}`,
+        }}>
           My Created Presales
         </ColorButton>
       </Box>
+
       <Filter />
 
-      <Box sx={{mb:10}}>
+      <Box sx={{ mb: 10 }}>
         {quickView ? <QuickView /> : <></>}
         {allPresale ? <AllPresale /> : <></>}
         {contribution ? <MyContribution /> : <></>}
         {favourite ? <MyFavourite /> : <></>}
         {createdPresales ? <MyCreatedPresales /> : <></>}
-        <Pagination count={50} sx={{mt:4}} />
+        <Pagination count={50} sx={{ mt: 4,
+          pl: { xs: '6%', sm: 0 }
+        }} />
       </Box>
 
     </Box>

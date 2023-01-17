@@ -20,7 +20,7 @@ const ProjectInformation = () => {
                 <Box sx={{ display: 'flex', flex: '1', flexDirection: 'column' }}>
                     <TextField label="Logo URL" type="text" sx={{ display: 'flex', flex: '1' }} />
                     <Typography component="p" sx={{ color: '#FC9823', textAlign: 'left', mt: '0.5rem' }}>
-                        URL must end with a supported image extension png, jpg, jpeg or gif. You can upload your image on https://postimages.org/
+                        URL must end with a supported image extension png, jpg, jpeg or gif. You can upload your image on https://postimagesorg/
                     </Typography>
                 </Box>
                 <TextField label="Total Supply" type="text" sx={{ display: 'flex', flex: '1' }} InputProps={{

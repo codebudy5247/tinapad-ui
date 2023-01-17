@@ -14,7 +14,10 @@ const commonStyles = {
 
 const HotProject = () => {
   return (
-    <Box sx={{ display: "flex", gap: 3 }}>
+    <Box sx={{
+      display: "flex", gap: 3, justifyContent: 'space-between', alignItems: 'center',
+      my: { xs: '10%', sm: '4%', md: '3%', lg: '1%' }
+    }}>
       <Box sx={{ mt: 2 }}>
         <Box sx={{ display: "flex", gap: 1 }}>
           <Image
@@ -40,7 +43,7 @@ const HotProject = () => {
 
         <Typography
           sx={{
-            fontWeight: 400,
+            fontWeight: { xs: "100", sm: "300", md: "400" },
             fontSize: "12px",
             lineHeight: "18px",
             textTransform: "capitalize",
@@ -52,7 +55,11 @@ const HotProject = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ width: "88%", backgroundColor: "inherit", mt: 2 }}>
+      <Box sx={{
+        width: { xs: '58%', sm: '70%', md: '75%', lg: '88%' },
+        backgroundColor: "inherit", mt: 2,
+        marginRight: "0px",
+      }}>
         <Marquee
           speed={50}
           gradient={false}

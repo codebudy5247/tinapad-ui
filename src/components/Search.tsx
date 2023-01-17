@@ -7,6 +7,8 @@ const Search = styled("div")(({ theme }) => ({
   position: "relative",
   border: "1px solid grey",
   borderRadius: "10px",
+  paddingTop: '1%',
+  paddingBottom: '1%',
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
@@ -40,7 +42,7 @@ const SearchBar = () => {
   const [searchInput, setSearchInput] = useState<any>("");
   return (
     <>
-      <Search sx={{}}>
+      <Search sx={{border: 'none', display: 'flex', alignItems: 'center', borderRadius: '18px'}}>
         <SearchIconWrapper>
           <SearchIcon />
         </SearchIconWrapper>

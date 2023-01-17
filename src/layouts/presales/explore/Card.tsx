@@ -28,245 +28,244 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 const Card = (props: any) => {
   return (
     // <Badge badgeContent={props?.explore?.badge} color="primary" >
-      <Box
-        sx={{
-          backgroundImage: `url(${props?.explore?.background})`,
-          width: "352px",
-          height: "332px",
-          borderRadius: "25px",
-          p: 2,
-          mb: 2, 
-        }}
-      >
-        <Box sx={{ display: "flex", gap: 2 }}>
-          <Box>
-            <Image
-              disabledEffect
-              visibleByDefault
-              alt="empty content"
-              src={btcImg}
-              sx={{ height: 40, mt: 1 }}
-            />
-          </Box>
-          <Box>
-            <Typography
-              sx={{
-                fontWeight: 600,
-                fontSize: "24px",
-                lineHeight: "29px",
-                textTransform: "capitalize",
-                // color: "#FFFFFF",
-                textAlign: "start",
-              }}
-            >
-              {props?.explore?.title}
-            </Typography>
-            {props?.explore?.tags.map((o: any) => (
-              <Chip label={o} color="success" size="small" />
-            ))}
-          </Box>
-        </Box>
-
-        <Box sx={{ mt: 1, display: "flex", justifyContent: "space-between" }}>
-          <Typography
-            sx={{
-              fontWeight: 400,
-              fontSize: "12px",
-              lineHeight: "18px",
-              textTransform: "capitalize",
-              textAlign: "start",
-              mt: 1,
-            }}
-          >
-            Max Contribution:{props?.explore?.maxContribution}
-          </Typography>
-
+    <Box
+      sx={{
+        backgroundImage: `url(${props?.explore?.background})`,
+        width: { xs: '300px', sm: '310px', md: '352px', lg: '352px' },
+        height: { xs: '295px', sm: '305px', md: '346px', lg: '347px' },
+        borderRadius: "25px",
+        p: 2,
+        mb: 2,
+      }}
+    >
+      <Box sx={{ display: "flex", gap: 2 }}>
+        <Box>
           <Image
             disabledEffect
             visibleByDefault
             alt="empty content"
-            src={ETHImg}
-            sx={{ height: 30 }}
+            src={btcImg}
+            sx={{ height: 40, mt: 1 }}
           />
         </Box>
+        <Box>
+          <Typography
+            sx={{
+              fontWeight: 600,
+              fontSize: "24px",
+              lineHeight: "29px",
+              textTransform: "capitalize",
+              textAlign: "start",
+            }}
+          >
+            {props?.explore?.title}
+          </Typography>
+          {props?.explore?.tags.map((o: any) => (
+            <Chip label={o} color="success" size="small" />
+          ))}
+        </Box>
+      </Box>
 
+      <Box sx={{ mt: 1, display: "flex", justifyContent: "space-between" }}>
         <Typography
           sx={{
             fontWeight: 400,
-            fontSize: "10px",
-            lineHeight: "15px",
+            fontSize: "12px",
+            lineHeight: "18px",
             textTransform: "capitalize",
             textAlign: "start",
             mt: 1,
           }}
         >
-          Progress [25%]
+          Max Contribution:{props?.explore?.maxContribution}
         </Typography>
-        <Box sx={{ flexGrow: 1, mt: 1 }}>
-          <BorderLinearProgress variant="determinate" value={25} />
-        </Box>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+
+        <Image
+          disabledEffect
+          visibleByDefault
+          alt="empty content"
+          src={ETHImg}
+          sx={{ height: 30 }}
+        />
+      </Box>
+
+      <Typography
+        sx={{
+          fontWeight: 400,
+          fontSize: "10px",
+          lineHeight: "15px",
+          textTransform: "capitalize",
+          textAlign: "start",
+          mt: 1,
+        }}
+      >
+        Progress [25%]
+      </Typography>
+      <Box sx={{ flexGrow: 1, mt: 1 }}>
+        <BorderLinearProgress variant="determinate" value={25} />
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Typography
+          sx={{
+            fontWeight: 400,
+            fontSize: "8px",
+            lineHeight: "12px",
+            textTransform: "capitalize",
+            textAlign: "start",
+            mt: 1,
+          }}
+        >
+          0 ETH
+        </Typography>
+        <Typography
+          sx={{
+            fontWeight: 400,
+            fontSize: "8px",
+            lineHeight: "12px",
+            textTransform: "capitalize",
+            textAlign: "start",
+            mt: 1,
+          }}
+        >
+          10 ETH
+        </Typography>
+      </Box>
+
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Typography
+          sx={{
+            fontWeight: 400,
+            fontSize: "12px",
+            lineHeight: "18px",
+            textTransform: "capitalize",
+            textAlign: "start",
+            mt: 1,
+            opacity: 0.6,
+            mixBlendMode: "normal",
+          }}
+        >
+          Hard Cap:
+        </Typography>
+        <Typography
+          sx={{
+            fontWeight: 400,
+            fontSize: "12px",
+            lineHeight: "18px",
+            textTransform: "capitalize",
+            textAlign: "start",
+            mt: 1,
+          }}
+        >
+          $ {props?.explore?.hardcap}
+        </Typography>
+      </Box>
+
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Typography
+          sx={{
+            fontWeight: 400,
+            fontSize: "12px",
+            lineHeight: "18px",
+            textTransform: "capitalize",
+            textAlign: "start",
+            mt: 1,
+            opacity: 0.6,
+            mixBlendMode: "normal",
+          }}
+        >
+          Liquidity:
+        </Typography>
+        <Typography
+          sx={{
+            fontWeight: 400,
+            fontSize: "12px",
+            lineHeight: "18px",
+            textTransform: "capitalize",
+            textAlign: "start",
+            mt: 1,
+          }}
+        >
+          {props?.explore?.liquidity} %
+        </Typography>
+      </Box>
+
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Typography
+          sx={{
+            fontWeight: 400,
+            fontSize: "12px",
+            lineHeight: "18px",
+            textTransform: "capitalize",
+            textAlign: "start",
+            mt: 1,
+            opacity: 0.6,
+            mixBlendMode: "normal",
+          }}
+        >
+          Lock Time:
+        </Typography>
+        <Typography
+          sx={{
+            fontWeight: 400,
+            fontSize: "12px",
+            lineHeight: "18px",
+            textTransform: "capitalize",
+            textAlign: "start",
+            mt: 1,
+          }}
+        >
+          {props?.explore?.lockTime} Days
+        </Typography>
+      </Box>
+      <Divider sx={{ width: "100%", mt: 1 }} />
+
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box>
           <Typography
             sx={{
               fontWeight: 400,
-              fontSize: "8px",
-              lineHeight: "12px",
+              fontSize: "12px",
+              lineHeight: { xs: '5px', sm: '8px', md: '12px', lg: '18px' },
               textTransform: "capitalize",
               textAlign: "start",
               mt: 1,
             }}
           >
-            0 ETH
+            Sale Starts In:
           </Typography>
           <Typography
             sx={{
               fontWeight: 400,
-              fontSize: "8px",
-              lineHeight: "12px",
+              fontSize: "12px",
+              lineHeight: "18px",
               textTransform: "capitalize",
               textAlign: "start",
-              mt: 1,
+              mt: { xs: 0.8, sm: 0.9, md: 1, lg: 1 },
             }}
           >
-            10 ETH
+            00:00:00:00
           </Typography>
         </Box>
 
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography
-            sx={{
-              fontWeight: 400,
-              fontSize: "12px",
-              lineHeight: "18px",
-              textTransform: "capitalize",
-              textAlign: "start",
-              mt: 1,
-              opacity: 0.6,
-              mixBlendMode: "normal",
-            }}
-          >
-            Hard Cap:
-          </Typography>
-          <Typography
-            sx={{
-              fontWeight: 400,
-              fontSize: "12px",
-              lineHeight: "18px",
-              textTransform: "capitalize",
-              textAlign: "start",
-              mt: 1,
-            }}
-          >
-            $ {props?.explore?.hardcap}
-          </Typography>
-        </Box>
-
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography
-            sx={{
-              fontWeight: 400,
-              fontSize: "12px",
-              lineHeight: "18px",
-              textTransform: "capitalize",
-              textAlign: "start",
-              mt: 1,
-              opacity: 0.6,
-              mixBlendMode: "normal",
-            }}
-          >
-            Liquidity:
-          </Typography>
-          <Typography
-            sx={{
-              fontWeight: 400,
-              fontSize: "12px",
-              lineHeight: "18px",
-              textTransform: "capitalize",
-              textAlign: "start",
-              mt: 1,
-            }}
-          >
-            {props?.explore?.liquidity} %
-          </Typography>
-        </Box>
-
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography
-            sx={{
-              fontWeight: 400,
-              fontSize: "12px",
-              lineHeight: "18px",
-              textTransform: "capitalize",
-              textAlign: "start",
-              mt: 1,
-              opacity: 0.6,
-              mixBlendMode: "normal",
-            }}
-          >
-            Lock Time:
-          </Typography>
-          <Typography
-            sx={{
-              fontWeight: 400,
-              fontSize: "12px",
-              lineHeight: "18px",
-              textTransform: "capitalize",
-              textAlign: "start",
-              mt: 1,
-            }}
-          >
-            {props?.explore?.lockTime} Days
-          </Typography>
-        </Box>
-        <Divider sx={{ width: "100%", mt: 1 }} />
-
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box>
-            <Typography
-              sx={{
-                fontWeight: 400,
-                fontSize: "12px",
-                lineHeight: "18px",
-                textTransform: "capitalize",
-                textAlign: "start",
-                mt: 1,
-              }}
-            >
-              Sale Starts In:
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: 400,
-                fontSize: "12px",
-                lineHeight: "18px",
-                textTransform: "capitalize",
-                textAlign: "start",
-                mt: 1,
-              }}
-            >
-              00:00:00:00
-            </Typography>
-          </Box>
-
-          <Box sx={{ display: "flex", gap: 1 }}>
-            <Image
-              disabledEffect
-              visibleByDefault
-              alt="empty content"
-              src={notifyImg}
-              sx={{ height: 30, mt: 1 }}
-            />
-            <Image
-              disabledEffect
-              visibleByDefault
-              alt="empty content"
-              src={heartImg}
-              sx={{ height: 30, mt: 1 }}
-            />
-          </Box>
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Image
+            disabledEffect
+            visibleByDefault
+            alt="empty content"
+            src={notifyImg}
+            sx={{ height: 30, mt: { xs: 0.4, sm: 0.8, md: 1, lg: 1 } }}
+          />
+          <Image
+            disabledEffect
+            visibleByDefault
+            alt="empty content"
+            src={heartImg}
+            sx={{ height: 30, mt: { xs: 0.4, sm: 0.8, md: 1, lg: 1 } }}
+          />
         </Box>
       </Box>
-  //  </Badge>
+    </Box>
+    //  </Badge>
   );
 };
 

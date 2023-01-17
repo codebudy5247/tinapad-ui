@@ -12,6 +12,7 @@ const AllPresale = () => {
           textTransform: "capitalize",
           // color: "#FFFFFF",
           textAlign: "center",
+          mt: '2rem'
         }}
       >
         All Presales

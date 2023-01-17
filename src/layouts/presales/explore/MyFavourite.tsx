@@ -11,6 +11,7 @@ const MyFavourite = () => {
         textTransform: "capitalize",
         // color: "#FFFFFF",
         textAlign: "center",
+        mt: '2rem'
       }}
     >
       My Favourite
