@@ -4,8 +4,6 @@ import elipseImage from "../../../assets/ellipse.png";
 import Marquee from "react-fast-marquee";
 import btcImg from "../../../assets/btc.png";
 const commonStyles = {
-  // bgcolor: '#F20CEC',
-  // borderColor: '#F20CEC',
   m: 1,
   border: 1,
   width: "1.5rem",
@@ -30,7 +28,7 @@ const HotProject = () => {
           <Typography
             sx={{
               fontWeight: 600,
-              fontSize: "18px",
+              fontSize: { xs: '16px', sm: '18px' },
               lineHeight: "27px",
               textTransform: "capitalize",
               color: "#FFFFFF",
@@ -44,7 +42,7 @@ const HotProject = () => {
         <Typography
           sx={{
             fontWeight: { xs: "100", sm: "300", md: "400" },
-            fontSize: "12px",
+            fontSize: { xs: '11px', sm: '12px' },
             lineHeight: "18px",
             textTransform: "capitalize",
             color: "#FFFFFF",

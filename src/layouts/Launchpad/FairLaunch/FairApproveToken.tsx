@@ -1,17 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
 import InputAdornment from '@mui/material/InputAdornment';
-import Input from '@mui/material/Input';
 import Image from "../../../components/Image"
 import BigYtubeImg from "../../../assets/BigYtubeImg.png"
 import IconButton from '@mui/material/IconButton';
-import Button from '@mui/material/Button';
-import StepButton from '@mui/material/StepButton'
 import { Autocomplete, FormControl, FormGroup, MenuItem, TextField } from '@mui/material';
-import FormLabel from '@mui/material/FormLabel';
-import Typography from '@mui/material/Typography';
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -30,10 +23,9 @@ const FairApproveToken = () => {
       transitionDuration: '300ms',
       '&.Mui-checked': {
         transform: 'translateX(16px)',
-        color: '#fff',
+        color: '#FFC0CB',
         '& + .MuiSwitch-track': {
-          backgroundColor: theme.palette.mode === 'dark' ? '#2ECA45' : '#65C466',
-          opacity: 1,
+          backgroundColor: theme.palette.mode === 'dark' ? 'rgba(242, 12, 236,0.6)' : '#65C466',
           border: 0,
         },
         '&.Mui-disabled + .MuiSwitch-track': {
@@ -70,26 +62,34 @@ const FairApproveToken = () => {
   }));
 
   return (
-    <FormControl sx={{ backgroundColor: '#1D1F23', height: '', marginTop: '2rem', marginBottom: '3rem', display: 'flex', flexDirection: 'column', rowGap: '2vh', borderRadius: '20px', padding: '3rem' }}>
-      <Box sx={{ display: 'flex', columnGap: '2rem' }}>
-        <FormControl sx={{ display: 'flex', flex: '1' }}>
-          <FormControlLabel
-            control={<IOSSwitch sx={{ m: 1 }} />}
-            label="Launch a stealth sole" />
+    <FormControl sx={{
+      display: "flex", flexDirection: 'column', columnGap: "5%",
+      backgroundColor: "#1D1F23", height: "", marginBottom: "3rem", borderRadius: "20px",
+      marginTop: { xs: '0', sm: '1rem', md: '2rem' },
+      padding: { xs: '1.2rem', md: '2rem', lg: '3rem' },
+    }}>
+      <Box sx={{ display: 'flex', mb: { xs: '0.6rem', md: '1rem' } }}>
+        <FormControl sx={{ display: 'flex', flex: '1', fontWeight: '100' }}>
+          <FormControlLabel label="Launch a stealth sole"
+            control={<IOSSwitch sx={{ m: 1 }} defaultChecked color="warning" />}
+          />
         </FormControl>
       </Box>
-      <TextField fullWidth id="outlined-basic" label="Token Address" variant="outlined" sx={{ mb: '1rem' }}
+      <TextField fullWidth id="outlined-basic" autoComplete="off" label="Token Address" sx={{ mb: '1rem' }}
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
               <IconButton edge="end" color="primary">
-                <ColorButton sx={{ fontWeight: '700' }}>Create Token</ColorButton>
+                <ColorButton sx={{ fontSize: { xs: '12px', sm: '13px', md: '14px' } }}>
+                  Create Token
+                </ColorButton>
               </IconButton>
             </InputAdornment>
           ),
-        }} />
-      <Box sx={{ flex: 1, mt: '1rem' }}>
-        <Image
+        }}
+      />
+      <Box sx={{ flex: 1, my: '1rem' }}>
+        <Image sx={{ borderRadius: '14px' }}
           disabledEffect
           visibleByDefault
           alt="empty content"

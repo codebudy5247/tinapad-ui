@@ -20,7 +20,6 @@ const Tokenomix = () => {
           fontSize: "16px",
           lineHeight: "19.36px",
           textTransform: "capitalize",
-          // color: "#FFFFFF",
           textAlign: "start",
         }}
       >
@@ -69,9 +68,9 @@ const Tokenomix = () => {
           gap: 3,
         }}
       >
-        <Box sx={{ display: "flex", gap: 1 }}>
+        <Box sx={{ display: "flex", gap: 1, alignItems: 'center' }}>
           <Box
-            sx={{ p: 1, backgroundColor: "#F20CEC", borderRadius: "50%" }}
+            sx={{ width: '10px', height: '10px', backgroundColor: "#F20CEC", borderRadius: "50%" }}
           ></Box>
           <Typography
             sx={{
@@ -86,9 +85,9 @@ const Tokenomix = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: "flex", gap: 1 }}>
+        <Box sx={{ display: "flex", gap: 1, alignItems: 'center' }}>
           <Box
-            sx={{ p: 1, backgroundColor: "#F20CEC", borderRadius: "50%" }}
+            sx={{ width: '10px', height: '10px', backgroundColor: "#F20CEC", borderRadius: "50%" }}
           ></Box>
           <Typography
             sx={{
@@ -103,13 +102,12 @@ const Tokenomix = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: "flex", gap: 1 }}>
-          <Box
-            sx={{
-              p: 1,
-              backgroundColor: "rgba(242, 12, 236, 0.6)",
-              borderRadius: "50%",
-            }}
+        <Box sx={{ display: "flex", gap: 1, alignItems: 'center' }}>
+          <Box sx={{
+            width: '10px', height: '10px',
+            backgroundColor: "rgba(242, 12, 236, 0.6)",
+            borderRadius: "50%",
+          }}
           ></Box>
           <Typography
             sx={{
@@ -134,9 +132,9 @@ const Tokenomix = () => {
           gap: 2,
         }}
       >
-        <Box sx={{ display: "flex", gap: 1 }}>
+        <Box sx={{ display: "flex", gap: 1, alignItems: 'center' }}>
           <Box
-            sx={{ p: 1, backgroundColor: "#F20CEC", borderRadius: "50%" }}
+            sx={{ width: '10px', height: '10px', backgroundColor: "#F20CEC", borderRadius: "50%" }}
           ></Box>
           <Typography
             sx={{
@@ -151,9 +149,9 @@ const Tokenomix = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: "flex", gap: 1 }}>
+        <Box sx={{ display: "flex", gap: 1, alignItems: 'center' }}>
           <Box
-            sx={{ p: 1, backgroundColor: "#F20CEC", borderRadius: "50%" }}
+            sx={{ width: '10px', height: '10px', backgroundColor: "#F20CEC", borderRadius: "50%" }}
           ></Box>
           <Typography
             sx={{
@@ -168,13 +166,12 @@ const Tokenomix = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: "flex", gap: 1 }}>
-          <Box
-            sx={{
-              p: 1,
-              backgroundColor: "rgba(242, 12, 236, 0.6)",
-              borderRadius: "50%",
-            }}
+        <Box sx={{ display: "flex", gap: 1, alignItems: 'center' }}>
+          <Box sx={{
+            width: '10px', height: '10px',
+            backgroundColor: "rgba(242, 12, 236, 0.6)",
+            borderRadius: "50%",
+          }}
           ></Box>
           <Typography
             sx={{

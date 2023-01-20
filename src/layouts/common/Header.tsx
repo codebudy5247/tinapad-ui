@@ -4,6 +4,7 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import { ColorButton } from "../../components/Button";
 import { useState, useEffect } from "react";
+import MenuIconDrawer from "../MenuIconDrawer";
 
 const DesktopView = () => {
   return (
@@ -48,13 +49,16 @@ const DesktopView = () => {
         </ColorButton>
       </Stack>
     </Box>
-    
-);
+
+  );
 };
 
 const MobileView = () => {
   return (
     <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box>
+        <MenuIconDrawer />
+      </Box>
       <Box>
         <SearchBar />
       </Box>
@@ -63,8 +67,11 @@ const MobileView = () => {
           variant="contained"
           startIcon={<AddCircleIcon />}
           sx={{
+            display: 'flex', justifyContent: 'center', alignItems: 'center',
             height: "fit-content",
             borderRadius: "20px",
+            fontWeight: "100",
+            fontSize: "13px",
             bgcolor: "rgba(242, 12, 236, 0.15)",
           }}
         >
@@ -73,8 +80,11 @@ const MobileView = () => {
         <ColorButton
           variant="contained"
           sx={{
+            display: 'flex', justifyContent: 'center', alignItems: 'center',
             height: "fit-content",
             borderRadius: "20px",
+            fontWeight: "100",
+            fontSize: "13px",
             bgcolor: "rgba(242, 12, 236, 0.15)",
           }}
           startIcon={<AccountBalanceWalletIcon />}
@@ -106,7 +116,9 @@ const Header = () => {
     };
   }, []);
 
-  return <>{mobileView ? <MobileView /> : <DesktopView />}</>;
+  return <>
+    {mobileView ? <MobileView /> : <DesktopView />}
+  </>;
 };
 
 export default Header;

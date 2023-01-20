@@ -10,6 +10,7 @@ import FormLabel from '@mui/material/FormLabel';
 import CalendarIcon from '../../../assets/CalendarIcon.png'
 import { ColorButton } from '../components/Button';
 import Header from '../layouts/common/Header';
+import Stack from '@mui/material/Stack';
 
 
 const CreateToken = () => {
@@ -92,34 +93,34 @@ const CreateToken = () => {
                     <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left' }}>Create Token
                     </FormLabel>
                 </FormControl>
-                <Box sx={{ display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box' }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                        <Autocomplete disablePortal options={top100Films} sx={{ display: 'flex', flex: '1' }}
+                <Stack direction={{ xs: 'column' }} spacing={3}>
+                    <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                        <Autocomplete fullWidth disablePortal options={top100Films}
                             renderInput={(params) => <TextField {...params} label="Token Type" helperText="FEE: 1BNB" />} />
-                        <TextField label="Token Name" type="text" defaultValue="Token Name" sx={{ display: 'flex', flex: '1' }} />
-                    </Box>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                        <TextField label="Token Symbol" type="text" defaultValue="Token Symbol" sx={{ display: 'flex', flex: '1' }} />
-                        <TextField label="Token Decimal" type="text" defaultValue="Token Decimal" sx={{ display: 'flex', flex: '1' }} />
-                    </Box>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                        <TextField label="Total Supply" type="text" defaultValue="Total Supply" sx={{ display: 'flex', flex: '1' }} />
-                        <TextField label="Max Wallet" type="text" defaultValue="Ex. 10,000,000" sx={{ display: 'flex', flex: '1' }} />
-                    </Box>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                        <TextField label="Max Transaction Amount" type="text" defaultValue="Ex. 10,000,000" sx={{ display: 'flex', flex: '1' }} />
-                        <Autocomplete disablePortal options={top100Films} sx={{ display: 'flex', flex: '1' }}
+                        <TextField fullWidth label="Token Name" type="text" defaultValue="Token Name" />
+                    </Stack>
+                    <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                        <TextField fullWidth label="Token Symbol" type="text" defaultValue="Token Symbol" />
+                        <TextField fullWidth label="Token Decimal" type="text" defaultValue="Token Decimal" />
+                    </Stack>
+                    <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                        <TextField fullWidth label="Total Supply" type="text" defaultValue="Total Supply" />
+                        <TextField fullWidth label="Max Wallet" type="text" defaultValue="Ex. 10,000,000" />
+                    </Stack>
+                    <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                        <TextField fullWidth label="Max Transaction Amount" type="text" defaultValue="Ex. 10,000,000" />
+                        <Autocomplete fullWidth disablePortal options={top100Films}
                             renderInput={(params) => <TextField {...params} label="Router" />} />
-                    </Box>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', rowGap: '0.4rem', pl: '2%' }}>
+                    </Stack>
+                    <Stack sx={{ display: 'flex', flexDirection: 'column', rowGap: '0.4rem', pl: '2%' }}>
                         <Typography component="p" sx={{ textAlign: 'left', fontSize: '12px', fontWeight: '400' }}>Base Token</Typography>
                         <Typography component="p" sx={{ textAlign: 'left', fontSize: '12px', fontWeight: '400' }}>BNB:
-                            <Typography component="span" sx={{ fontWeight: '700', color: '#F47459', fontSize: '12px' }}>0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c</Typography>
+                            <Typography component="span" sx={{ fontWeight: '700', color: '#F47459', fontSize: '12px', overflowWrap: 'anywhere', ml: '4%' }}>0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c</Typography>
                         </Typography>
                         <Typography component="p" sx={{ textAlign: 'left', fontSize: '12px', fontWeight: '400' }}>BUSD:
-                            <Typography component="span" sx={{ fontWeight: '700', color: '#F20CEC', fontSize: '12px' }}>0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c</Typography>
+                            <Typography component="span" sx={{ fontWeight: '700', color: '#F20CEC', fontSize: '12px', overflowWrap: 'anywhere', ml: '4%' }}>0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c</Typography>
                         </Typography>
-                    </Box>
+                    </Stack>
                     <TextField label="Select Any of One Above" type="text" sx={{ width: '49%' }} />
                     <FormGroup>
                         <FormControlLabel
@@ -134,21 +135,23 @@ const CreateToken = () => {
                         <Typography component="span" sx={{ fontWeight: '700', fontSize: '12px' }}>20%</Typography>
                         . (Fee decimals is 1.)
                     </Typography>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                        <TextField label="Sell Liquidity Fee [%]" defaultValue="0-20%" type="text" sx={{ display: 'flex', flex: '1' }} />
-                        <TextField label="Sell Marketing Fee [%]" defaultValue="0-20" type="text" sx={{ display: 'flex', flex: '1' }} />
-                    </Box>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                        <TextField label="Buy Liquidity Fee [%]" defaultValue="0-20" type="text" sx={{ display: 'flex', flex: '1' }} />
-                        <TextField label="Buy Marketing Fee [%]" defaultValue="0-20" type="text" sx={{ display: 'flex', flex: '1' }} />
-                    </Box>
+                    <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                        <TextField fullWidth label="Sell Liquidity Fee [%]" defaultValue="0-20%" type="text" />
+                        <TextField fullWidth label="Sell Marketing Fee [%]" defaultValue="0-20" type="text" />
+                    </Stack>
+                    <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                        <TextField fullWidth label="Buy Liquidity Fee [%]" defaultValue="0-20" type="text" />
+                        <TextField fullWidth label="Buy Marketing Fee [%]" defaultValue="0-20" type="text" />
+                    </Stack>
                     <FormGroup>
                         <FormControlLabel
                             control={<IOSSwitch sx={{ m: 1 }} defaultChecked color="warning" />}
                             label="Implement Anti-Bot" />
                     </FormGroup>
-                    <ColorButton sx={{ mx: 'auto', px: '2%' }}>Create Token</ColorButton>
-                </Box>
+                    <Box>
+                        <ColorButton sx={{ display: 'flex', justifyContent: 'center', mx: 'auto', px: '2%', width: 'fit-content' }}>Create Token</ColorButton>
+                    </Box>
+                </Stack>
             </Box>
         </>
     )

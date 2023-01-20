@@ -9,7 +9,7 @@ const WhitelistTimer = () => {
         p: 3,
       }}
     >
-      <Box sx={{ display: "flex", gap: 2 }}>
+      <Box sx={{ display: "flex", justifyContent: 'space-between', gap: 2 }}>
         <Typography
           sx={{
             fontWeight: 600,
@@ -17,7 +17,7 @@ const WhitelistTimer = () => {
             lineHeight: "19px",
             textTransform: "capitalize",
             // color: "#FFFFFF",
-            textAlign: "start",
+            textAlign: "left",
           }}
         >
           Whitelist Sale Starts In:

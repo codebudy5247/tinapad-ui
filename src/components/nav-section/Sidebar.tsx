@@ -55,20 +55,18 @@ const Sidebar = () => {
 
         {appRoutes.map((route, index) =>
           route.sidebarProps ? (
-            route.child ? (
-              <SidebarItemCollapse item={route} key={index} />
-            ) : (
-              <SidebarItem item={route} key={index} />
-            )
+            route.child ?
+              (<SidebarItemCollapse item={route} key={index} />) :
+              (<SidebarItem item={route} key={index} />)
           ) : null
         )}
 
-        <ListItemButton sx={{ml:1}}>
+        <ListItemButton sx={{ ml: 1 }}>
           <ListItemIcon sx={{ color: "white" }}>
             <SportsVolleyballIcon />
           </ListItemIcon>
           <Box>
-          <SocialsButton />
+            <SocialsButton />
           </Box>
         </ListItemButton>
       </List>

@@ -6,7 +6,7 @@ export const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: "#FFFFFF",
   backgroundColor: "#F20CEC",
   borderRadius: "12px",
-  fontSize: "14px",
+  fontSize: '14px',
   fontWeight: "700",
   textTransform: "capitalize",
   "&:hover": {

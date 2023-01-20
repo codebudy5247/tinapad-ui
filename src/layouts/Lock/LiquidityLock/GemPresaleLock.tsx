@@ -24,8 +24,8 @@ const GemPresaleLock = () => {
       <Table aria-label='simple table'>
         <TableHead>
           <TableRow>
-            <TableCell sx={{ fontWeight: '500', fontSize: '14px' }}>Token</TableCell>
-            <TableCell sx={{ fontWeight: '500', fontSize: '14px' }}>Amount</TableCell>
+            <TableCell sx={{ fontWeight: '500', fontSize: '14px', pb: '3px' }}>Token</TableCell>
+            <TableCell sx={{ fontWeight: '500', fontSize: '14px', pb: '3px' }}>Amount</TableCell>
             <TableCell></TableCell>
           </TableRow>
         </TableHead>
@@ -33,15 +33,25 @@ const GemPresaleLock = () => {
           {
             tableData.map((row, index) => (
               <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                <TableCell sx={{ display: 'flex', justifyContent: 'start', columnGap: '2%', px: '0' }}>
-                  <Image src={row.img} sx={{ width: '2.5rem', textAlign: 'left' }} />
+                <TableCell sx={{ display: 'flex', justifyContent: 'start', alignItems: 'center', columnGap: '4%', px: '0px' }}>
+                  <Image src={row.img} sx={{
+                    textAlign: 'left', mx: { xs: '4%', md: '1%' },
+                    width: { xs: '1.6rem', sm: '1.5rem', md: '2.5rem' },
+                    height: { xs: '2rem', sm: '1.8rem', md: '0' }
+                  }} />
                   <Box>
-                    <Typography component="p" sx={{ fontWeight: '500', fontSize: '14px' }}>{row.wrapped}</Typography>
-                    <Typography component="p" sx={{ fontWeight: '500', fontSize: '14px', opacity: '44%' }}>{row.WBNB}</Typography>
+                    <Typography component="p" sx={{
+                      fontWeight: '500',
+                      fontSize: { xs: '10px', sm: '12px', md: '14px' }
+                    }}>{row.wrapped}</Typography>
+                    <Typography component="p" sx={{
+                      fontWeight: '500',
+                      fontSize: { xs: '10px', sm: '12px', md: '14px' }, opacity: '44%'
+                    }}>{row.WBNB}</Typography>
                   </Box>
                 </TableCell>
-                <TableCell>{row.amount}</TableCell>
-                <TableCell sx={{ color: '#F20CEC' }}>{row.view}</TableCell>
+                <TableCell sx={{ fontSize: { xs: '11px', sm: '12px', md: '14px' } }}>{row.amount}</TableCell>
+                <TableCell sx={{ color: '#F20CEC', fontSize: { xs: '12px', sm: '12px', md: '14px' } }}>{row.view}</TableCell>
               </TableRow>
             ))
           }

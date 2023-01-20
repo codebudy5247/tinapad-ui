@@ -62,13 +62,13 @@ const FairStepper = () => {
   return (
     <Box sx={{ width: '100%', my: '3rem' }}>
       <Stepper nonLinear activeStep={activeStep} alternativeLabel>
-      {steps.map((o, index) => (
+        {steps.map((o, index) => (
           <Step key={o.id} completed={completed[index]}>
             <StepButton onClick={handleStep(index)}>
               <Typography
                 sx={{
-                  fontWeight: "600",
-                  fontSize: "16px",
+                  fontWeight: { xs: '200', sm: '300', md: '600' },
+                  fontSize: { xs: '13px', sm: '14px', md: '16px' },
                   lineHeight: "19px",
                 }}
               >
@@ -102,7 +102,7 @@ const FairStepper = () => {
           </React.Fragment>
         ) : (
           <React.Fragment>
-     {/* ...............................................Steps_Pages............................................... */}
+            {/* ...............................................Steps_Pages............................................... */}
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
               {
                 activeStep == 0 ?

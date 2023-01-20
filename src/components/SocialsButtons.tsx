@@ -49,12 +49,12 @@ export default function SocialsButton({
       socialColor: '#E02D69',
       path: links.instagram || '#instagram-link',
     },
-    {
-      name: 'Linkedin',
-      icon: 'eva:linkedin-fill',
-      socialColor: '#007EBB',
-      path: links.linkedin || '#linkedin-link',
-    },
+    // {
+    //   name: 'Linkedin',
+    //   icon: 'eva:linkedin-fill',
+    //   socialColor: '#007EBB',
+    //   path: links.linkedin || '#linkedin-link',
+    // },
     {
       name: 'Twitter',
       icon: 'eva:twitter-fill',

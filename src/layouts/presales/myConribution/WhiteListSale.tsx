@@ -37,11 +37,10 @@ const WhiteListSale = () => {
         <Box sx={{}}>
           <Typography
             sx={{
-              fontWeight: 600,
+              fontWeight: 400,
               fontSize: "16px",
               lineHeight: "19px",
               textTransform: "capitalize",
-              // color: "#FFFFFF",
               textAlign: "start",
             }}
           >
@@ -49,7 +48,7 @@ const WhiteListSale = () => {
           </Typography>
           <Typography
             sx={{
-              fontWeight: 600,
+              fontWeight: 400,
               fontSize: "16px",
               lineHeight: "19px",
               textTransform: "capitalize",
@@ -125,15 +124,15 @@ const WhiteListSale = () => {
         Contribute
       </Typography>
 
-      <Box sx={{ display: "flex", justifyContent: "space-between", mt: 1 }}>
+      <Box sx={{ display: "flex", justifyContent: "space-between", mt: 1, gap: {xs: '0', sm: '10%'} }}>
         <TextField
           id="outlined-basic"
           label="Amount"
           variant="outlined"
-          sx={{ width: 150 }}
+          sx={{ width: { xs: '48%', sm: '50%' } }}
           defaultValue={0}
         />
-        <ColorButton variant="contained" sx={{ width: "50%" }}>
+        <ColorButton variant="contained" sx={{ width: { xs: '48%', sm: '50%' } }}>
           BUY
         </ColorButton>
       </Box>

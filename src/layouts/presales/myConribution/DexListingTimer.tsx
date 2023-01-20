@@ -40,7 +40,7 @@ const DexListingTimer = () => {
       <Typography
         sx={{
           fontWeight: 400,
-          fontSize: "12px",
+          fontSize: "13px",
           lineHeight: "18px",
           textAlign: "start",
           opacity: 0.6,
@@ -52,7 +52,7 @@ const DexListingTimer = () => {
       <Typography
         sx={{
           fontWeight: 400,
-          fontSize: "16px",
+          fontSize: "13px",
           lineHeight: "24px",
           color: "#F20CEC",
           textAlign: "start",

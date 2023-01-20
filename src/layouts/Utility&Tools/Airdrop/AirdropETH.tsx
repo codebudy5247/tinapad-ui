@@ -82,7 +82,7 @@ const AirdropETH = () => {
             defaultValue="Default Value"
           />
         </FormGroup>
-        <ColorButton sx={{ width: 'fit-content', mx: 'auto', px: '8%', my: '5%' }}>OK</ColorButton>
+        <ColorButton sx={{ width: 'fit-content', mx: 'auto', px: { xs: '14%', sm: '8%' }, mt: '1rem' }}>ok</ColorButton>
       </FormGroup>
     </FormControl>
   )

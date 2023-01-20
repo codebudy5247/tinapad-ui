@@ -9,9 +9,9 @@ const LaunchPadRecord = () => {
           mt: 8,
           display: "flex",
           justifyContent: "space-between",
-          paddingLeft: {xs:0,sm:3},
-          paddingRight:  {xs:0,sm:3},
-          width: { xs: "100%"}
+          paddingLeft: { xs: 0, sm: 3 },
+          paddingRight: { xs: 0, sm: 3 },
+          width: { xs: "100%" }
         }}
       >
         <Box sx={{}}>
@@ -38,7 +38,7 @@ const LaunchPadRecord = () => {
             Projects All Time High on our Platform
           </Typography>
         </Box>
-        <Box sx={{ display: "flex", cursor: "pointer", alignItems: 'center'}}>
+        <Box sx={{ display: "flex", cursor: "pointer", alignItems: 'center' }}>
           <Typography
             sx={{
               fontWeight: 400,

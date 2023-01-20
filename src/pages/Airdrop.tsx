@@ -24,8 +24,7 @@ const Airdrop = () => {
                 transform: 'translateX(16px)',
                 color: '#FFC0CB',
                 '& + .MuiSwitch-track': {
-                    backgroundColor: theme.palette.mode === 'dark' ? '#F20CEC' : '#65C466',
-                    opacity: 0.15,
+                    backgroundColor: theme.palette.mode === 'dark' ? 'rgba(242, 12, 236,0.6)' : '#65C466',
                     border: 0,
                 },
                 '&.Mui-disabled + .MuiSwitch-track': {
@@ -60,25 +59,31 @@ const Airdrop = () => {
             }),
         },
     }));
+
     return (
         <>
             <Header />
-            <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column'
-            , boxSizing: 'border-box', padding: '5%', pb: '1rem', borderRadius: '20px', marginTop: '2rem' }}>
-                <FormControl sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Box sx={{
+                backgroundColor: '#1D1F23', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', boxSizing: 'border-box', padding: '5%', pb: '1rem', borderRadius: '20px', marginTop: '2rem',
+                width: { xs: '92%', sm: '90%', md: '80%', lg: '65%' }
+            }}>
+                <FormControl sx={{
+                    display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'space-between',
+                    mt: { xs: '2rem', sm: '1rem', md: '0' }
+                }}>
                     <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left' }}>Airdrop Tokens
                     </FormLabel>
-                    <Box sx={{ display: 'flex', columnGap: '5%' }}>
+                    <Box sx={{ display: 'flex', columnGap: '5%', my: { xs: '1rem', sm: '0' },justifyContent: 'center' }}>
                         <ButtonBase onClick={() => { setOpentab('Tokens') }}
                             sx={{
                                 fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
-                                borderRadius: '12px', padding: '0.5rem',
+                                borderRadius: '12px', padding: '0.6rem',
                                 bgcolor: `${opentab === 'Tokens' ? "#F20CEC" : ""}`,
                             }}>Tokens</ButtonBase>
                         <ButtonBase onClick={() => { setOpentab('ETH') }}
                             sx={{
                                 fontWeight: '600', fontSize: '14px', height: 'fit-content', color: 'white',
-                                borderRadius: '12px', padding: '0.5rem',
+                                borderRadius: '12px', padding: '0.6rem',
                                 bgcolor: `${opentab === 'ETH' ? "#F20CEC" : ""}`
                             }}>ETH</ButtonBase>
                     </Box>

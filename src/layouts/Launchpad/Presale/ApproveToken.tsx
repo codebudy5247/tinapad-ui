@@ -16,7 +16,19 @@ import { ColorButton } from "../../../components/Button";
 import StepForm2 from "./PresaleInformation";
 import StepForm3 from "./ProjectInformation";
 import StepForm4 from "./Submit";
+import { TableContainer, Table, TableHead, TableBody, TableRow, TableCell, Paper, } from '@mui/material'
+import Paragraph from "../../../components/Paragraph";
 
+
+function createData(property: string, amount: string) {
+  return { property, amount };
+}
+
+const tableData = [
+  createData('Token Name:', 'BitcoinXYZ'),
+  createData('Symbol:', 'BXYZ'),
+  createData('Total Supply:', '100,000,000,000'),
+];
 
 export default function ApproveToken() {
   const steps = [
@@ -56,10 +68,6 @@ export default function ApproveToken() {
     return Object.keys(completed).length;
   };
 
-  const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
-  };
-
   const allStepsCompleted = () => {
     return completedSteps() === totalSteps();
   };
@@ -81,8 +89,8 @@ export default function ApproveToken() {
             <StepButton onClick={handleStep(index)}>
               <Typography
                 sx={{
-                  fontWeight: "600",
-                  fontSize: "16px",
+                  fontWeight: { xs: '200', sm: '300', md: '600' },
+                  fontSize: { xs: '13px', sm: '14px', md: '16px' },
                   lineHeight: "19px",
                 }}
               >
@@ -117,34 +125,25 @@ export default function ApproveToken() {
           </React.Fragment>
         ) : (
           <React.Fragment>
+            {/* ...........................PagesStepper........................................................... */}
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              {activeStep == 0 ? (
-                <FormControl
-                  sx={{
-                    backgroundColor: "#1D1F23",
-                    height: "",
-                    marginTop: "2rem",
-                    marginBottom: "3rem",
-                    display: "flex",
-                    flexDirection: "column",
-                    rowGap: "8vh",
-                    borderRadius: "20px",
-                    padding: "3rem",
-                  }}
-                >
-                  <Box sx={{ display: "flex", columnGap: "2rem" }}>
-                    <Box sx={{ flex: 2 }}>
-                      <TextField
-                        fullWidth
-                        id="outlined-basic"
-                        label="Token Address"
-                        variant="outlined"
-                        sx={{ mt: "0.2rem", mb: "1rem" }}
+              {
+                activeStep == 0 ? (
+                  <FormControl sx={{
+                    display: "flex", flexDirection: { xs: "column", sm: "column", md: 'row', lg: 'row' },
+                    backgroundColor: "#1D1F23", height: "", marginBottom: "3rem", borderRadius: "20px",
+                    columnGap: "5%",
+                    marginTop: { xs: '0', sm: '1rem', md: '2rem' },
+                    padding: { xs: '1.2rem', md: '2rem', lg: '3rem' },
+                  }}>
+                    <Box sx={{ display: "flex", flex: "2", flexDirection: "column", rowGap: "2rem" }}>
+                      <TextField fullWidth id="outlined-basic" autoComplete="off" label="Token Address"
+                        sx={{ mt: { xs: '2rem', sm: '1rem', md: '0' }, display: 'flex', }}
                         InputProps={{
                           endAdornment: (
                             <InputAdornment position="end">
                               <IconButton edge="end" color="primary">
-                                <ColorButton sx={{ fontWeight: "700" }}>
+                                <ColorButton sx={{ fontSize: { xs: '12px', sm: '13px', md: '14px' } }}>
                                   Create Token
                                 </ColorButton>
                               </IconButton>
@@ -152,154 +151,41 @@ export default function ApproveToken() {
                           ),
                         }}
                       />
-                      <FormControl fullWidth sx={{ mt: 1 }} variant="standard">
-                        <Box
-                          sx={{
-                            flex: "1",
-                            justifyContent: "space-between",
-                            borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-                            py: "1.4%",
-                          }}
-                          display="flex"
-                          justifyContent="center"
-                          alignItems="center"
-                        >
-                          <Typography
-                            component="p"
-                            sx={{
-                              fontWeight: "400",
-                              fontSize: "12px",
-                              color: "#FFFFFF",
-                              opacity: "0.6",
-                            }}
-                          >
-                            Token Name:
-                          </Typography>
-                          <Typography
-                            component="p"
-                            sx={{
-                              fontWeight: "400",
-                              fontSize: "12px",
-                              color: "#FFFFFF",
-                            }}
-                          >
-                            BitcoinXYZ
-                          </Typography>
-                        </Box>
-                        <Box
-                          sx={{
-                            flex: "1",
-                            justifyContent: "space-between",
-                            borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-                            py: "1.4%",
-                          }}
-                          display="flex"
-                          justifyContent="center"
-                          alignItems="center"
-                        >
-                          <Typography
-                            component="p"
-                            sx={{
-                              fontWeight: "400",
-                              fontSize: "12px",
-                              color: "#FFFFFF",
-                              opacity: "0.6",
-                            }}
-                          >
-                            Symbol:
-                          </Typography>
-                          <Typography
-                            component="p"
-                            sx={{
-                              fontWeight: "400",
-                              fontSize: "12px",
-                              color: "#FFFFFF",
-                            }}
-                          >
-                            BXYZ
-                          </Typography>
-                        </Box>
-                        <Box
-                          sx={{
-                            flex: "1",
-                            justifyContent: "space-between",
-                            borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-                            py: "1.4%",
-                          }}
-                          display="flex"
-                          justifyContent="center"
-                          alignItems="center"
-                        >
-                          <Typography
-                            component="p"
-                            sx={{
-                              fontWeight: "400",
-                              fontSize: "12px",
-                              color: "#FFFFFF",
-                              opacity: "0.6",
-                            }}
-                          >
-                            Total Supply:
-                          </Typography>
-                          <Typography
-                            component="p"
-                            sx={{
-                              fontWeight: "400",
-                              fontSize: "12px",
-                              color: "#FFFFFF",
-                            }}
-                          >
-                            100,000,000,000
-                          </Typography>
-                        </Box>
-                      </FormControl>
+                      <Table>
+                        <TableBody>
+                          {
+                            tableData.map((row, index) => (
+                              <TableRow key={index} sx={{ display: 'flex', flex: '1', px: '0' }}>
+                                <TableCell sx={{ opacity: '0.6', fontWeight: '400', fontSize: '12px', display: 'flex', flex: '1', py: '0.8rem', px: '0' }}>{row.property}</TableCell>
+                                <TableCell sx={{ fontWeight: '400', fontSize: '12px', display: 'flex', flex: '1', justifyContent: 'end', py: '0.8rem', px: '0' }}>{row.amount}</TableCell>
+                              </TableRow>
+                            ))
+                          }
+                        </TableBody>
+                      </Table>
+                      <Box sx={{ display: "flex", flex: "1", flexDirection: "column", justifyContent: "space-between", mt: '1rem' }}>
+                        <ColorButton sx={{ fontWeight: "700", float: "left", width: { xs: '6rem', md: '8rem' } }}>
+                          Approve
+                        </ColorButton>
+                        <Paragraph sx={{ fontWeight: "400", fontSize: '12px', color: "#FC9823", mt: '2%', width: '100%', display: "inline-block" }}>Make sure token has <Paragraph sx={{ fontSize: '12px', fontWeight: '700', display: 'inline' }}>“Exclude transfer fee”</Paragraph> and <Paragraph sx={{ fontSize: '12px', fontWeight: '700', display: 'inline' }}>“Exclude Max Transaction”</Paragraph> if you use tax/Fees or Max Transaction limits.</Paragraph>
+                      </Box>
                     </Box>
-                    <Box sx={{ flex: 1 }}>
-                      <Image
+                    <Box sx={{ display: "flex", flex: "1", mt: { xs: '2rem', sm: '1rem', md: '0' } }}>
+                      <Image sx={{ borderRadius: "18px", height: "62%", width: "100%" }}
                         disabledEffect
                         visibleByDefault
                         alt="empty content"
                         src={Form_youtubeImg}
                       />
                     </Box>
-                  </Box>
-
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                      height: "6 rem",
-                    }}
-                  >
-                    <ColorButton
-                      sx={{ fontWeight: "700", float: "left", width: "8rem" }}
-                    >
-                      Approve
-                    </ColorButton>
-                    <Typography
-                      component="p"
-                      sx={{
-                        float: "left",
-                        width: "70%",
-                        textAlign: "left",
-                        mt: "6px",
-                        color: "#FC9823",
-                      }}
-                    >
-                      Make sure token has “Exclude transfer fee” and “Exclude
-                      Max Transaction” if you use tax/Fees or Max Transaction
-                      limits.
-                    </Typography>
-                  </Box>
-                </FormControl>
-              ) : activeStep == 1 ? (
-                <StepForm2 />
-              ) : activeStep === 2 ? (
-                <StepForm3 />
-              ) : (
-                <StepForm4 />
-              )}
+                  </FormControl>
+                ) : activeStep == 1 ? (
+                  <StepForm2 />
+                ) : activeStep === 2 ? (
+                  <StepForm3 />
+                ) : (
+                  <StepForm4 />
+                )}
             </Typography>
           </React.Fragment>
         )}

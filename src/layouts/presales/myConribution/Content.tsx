@@ -2,7 +2,8 @@ import React from "react";
 import { Grid, Box, Typography } from "@mui/material";
 import BackgroundImg from "../../../assets/backContribution.png";
 import headerImg from "../../../assets/contri.png";
-import btcImg from "../../../assets/btc.png";
+import headerImgSmall from "../../../assets/contriSmall.png";
+import btcImgMetatate from "../../../assets/Bitcoin.png";
 import Image from "../../../components/Image";
 import SocialsButton from "../../../components/SocialsButtons";
 import Chip from "@mui/material/Chip";
@@ -15,7 +16,7 @@ import Tokenomix from "./Tokenomix";
 
 const Content = () => (
   <Grid container spacing={2}>
-    <Grid item xs={12} md={8} sx={{ mb: 5, mt: 4 }}>
+    <Grid item xs={12} md={8} sx={{ mb: { xs: 0, sm: 1, md: 2, lg: 5 }, mt: { md: 2.5, lg: 4 } }}>
       <Box
         sx={{
           backgroundColor: grey[900],
@@ -28,57 +29,55 @@ const Content = () => (
           mb: 2,
         }}
       >
-        <Image
-          disabledEffect
-          visibleByDefault
-          alt="empty content"
+        <Image disabledEffect visibleByDefault alt="empty content"
           src={headerImg}
-          sx={{ width: "100%" }}
+          sx={{ width: '100%', display: { xs: 'none', md: 'block' } }}
+        />
+        <Image disabledEffect visibleByDefault alt="empty content"
+          src={headerImgSmall}
+          sx={{ width: '100%', display: { xs: 'block', md: 'none' } }}
         />
 
-        <Box sx={{ display: "flex", justifyContent: "space-between", p: 3 }}>
-          <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: { xs: 'start', md: 'end' }, p: { xs: 2, md: 3 } }}>
+          <Box sx={{ display: "flex", gap: 2 }}>
             <Box>
-              <Image
-                disabledEffect
-                visibleByDefault
+              <Image disabledEffect visibleByDefault
                 alt="empty content"
-                src={btcImg}
-                sx={{ height: 40, mt: 1 }}
+                src={btcImgMetatate}
+                sx={{ width: '48px', mt: 1 }}
               />
             </Box>
             <Box>
-              <Typography
-                sx={{
-                  fontWeight: 600,
-                  fontSize: "24px",
-                  lineHeight: "29px",
-                  textTransform: "capitalize",
-                  // color: "#FFFFFF",
-                  textAlign: "start",
-                }}
-              >
+              <Typography sx={{
+                fontWeight: { xs: '200', sm: '300', md: '600' },
+                fontSize: "24px",
+                lineHeight: "29px",
+                textTransform: "capitalize",
+                textAlign: "start",
+              }}>
                 Metatate
               </Typography>
               <SocialsButton />
             </Box>
           </Box>
 
-          <Box sx={{ display: "flex", gap: 1, mt: 3 }}>
-            <Chip label="Audit" color="success" size="small" />
-            <Chip label="Upcoming" color="success" size="small" />
-            <Chip label="KYC" color="success" size="small" />
+          <Box sx={{ display: "flex", flexDirection: { xs: 'column', md: 'row' }, gap: 0.6 }}>
+            <Chip label="Audit" size="small"
+              sx={{ color: 'white', bgcolor: 'rgba(242, 12, 236, 0.5)', borderRadius: '6px' }} />
+            <Chip label="Upcoming" size="small"
+              sx={{ color: 'white', bgcolor: 'rgba(12, 127, 234, 0.5)', borderRadius: '6px' }} />
+            <Chip label="KYC" size="small"
+              sx={{ color: 'white', bgcolor: 'rgba(20, 197, 157, 0.5)', borderRadius: '6px' }} />
           </Box>
         </Box>
 
         <Box sx={{ p: 3 }}>
-          <Typography
-            sx={{
-              fontWeight: 400,
-              fontSize: "12px",
-              lineHeight: "18px",
-              textAlign: "start",
-            }}
+          <Typography sx={{
+            fontWeight: 400,
+            fontSize: "12px",
+            lineHeight: "18px",
+            textAlign: "start",
+          }}
           >
             Welcome to Metatate™, where mental health met web3 wellness and
             created the quintessential “M2E (Meditate-To-Earn)” Ecosystem. At
@@ -112,7 +111,6 @@ const Content = () => (
               fontSize: "12px",
               lineHeight: "18px",
               textTransform: "capitalize",
-              // color: "#FFFFFF",
               textAlign: "start",
               opacity: 0.6,
             }}
@@ -127,7 +125,7 @@ const Content = () => (
                 lineHeight: "18px",
                 textTransform: "capitalize",
                 color: "#F20CEC",
-                textAlign: "start",
+                textAlign: "right",
               }}
             >
               0xeE32AefeB41678d750FD794B11403b0d3113509B
@@ -482,7 +480,7 @@ const Content = () => (
               fontSize: "12px",
               lineHeight: "18px",
               textTransform: "capitalize",
-              textAlign: "start",
+              textAlign: "right",
             }}
           >
             2022-11-26 18:00
@@ -491,7 +489,7 @@ const Content = () => (
       </Box>
     </Grid>
 
-    <Grid item xs={12} md={4} sx={{ mb: 5, mt: 4 }}>
+    <Grid item xs={12} md={4} sx={{ mb: 5, mt: { xs: 0, md: 2, lg: 4 } }}>
       <WhitelistTimer />
       <WhiteListSale />
       <DexListingTimer />

@@ -13,9 +13,15 @@ const TokenLock = () => {
     return (
         <>
             <Header />
-            <Box sx={{ backgroundColor: '#1D1F23', width: '65%', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', padding: '5%', pb: '1.2rem', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins' }}>
-                <FormControl>
-                    <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left', mb: '4%' }}>
+            <Box sx={{
+                backgroundColor: '#1D1F23', marginX: 'auto', marginY: 'auto', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', padding: '5%', pb: '1.2rem', borderRadius: '20px', marginTop: '2rem', fontFamily: 'Poppins', mb: '1rem',
+                width: { xs: '94%', sm: '90%', md: '80%', lg: '65%' }
+            }}>
+                <FormControl sx={{ mt: { xs: '2rem', sm: '1rem', md: '0' } }}>
+                    <FormLabel sx={{
+                        fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left',
+                        mb: { xs: '8%', sm: '4%' }
+                    }}>
                         Token Locks </FormLabel>
                     <FormGroup sx={{ display: 'flex', flexDirection: 'column', rowGap: '1.5rem' }}>
                         <TextField id="outlined-required"
@@ -25,13 +31,15 @@ const TokenLock = () => {
                         <Box sx={{ display: 'flex', columnGap: '2%', justifyContent: 'end' }}>
                             <Button onClick={() => { setOpentab('All') }}
                                 sx={{
-                                    height: 'fit-content', color: 'white', borderRadius: '15px',
+                                    textTransform: 'capitalize', height: 'fit-content', color: 'white', borderRadius: '15px',
                                     bgcolor: `${opentab === 'All' ? "#F20CEC" : ""}`,
+                                    "&:hover": { bgcolor: '#F20CEC' }
                                 }}>All</Button>
                             <Button onClick={() => { setOpentab('My Lock') }}
                                 sx={{
-                                    height: 'fit-content', color: 'white', borderRadius: '15px',
-                                    bgcolor: `${opentab === 'My Lock' ? "#F20CEC" : ""}`
+                                    textTransform: 'capitalize', height: 'fit-content', color: 'white', borderRadius: '15px',
+                                    bgcolor: `${opentab === 'My Lock' ? "#F20CEC" : ""}`,
+                                    "&:hover": { bgcolor: '#F20CEC' }
                                 }}>My Lock</Button>
                         </Box>
                     </FormGroup>
@@ -43,7 +51,7 @@ const TokenLock = () => {
                                     <Typography component="h5" sx={{ fontWeight: '400', fontSize: '14px', opacity: '0.5' }}>Amount</Typography>
                                 </Box>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', rowGap: '1rem' }}>
-                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(93, 100, 108, 1)' }}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: { xs: 'start', sm: 'center' }, borderBottom: '1px solid rgba(93, 100, 108, 1)' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Image sx={{ width: '2rem', height: '2rem', mr: '1rem' }} alt="empty content" src={Bitcoinimg} />
                                             <Box>
@@ -54,7 +62,7 @@ const TokenLock = () => {
                                         <Typography component="p" sx={{ fontWeight: '400', fontSize: '12px', }}>50,000,000</Typography>
                                         <Typography component="p" sx={{ fontWeight: '400', fontSize: '14px', color: '#F20CEC' }}>View</Typography>
                                     </Box>
-                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(93, 100, 108, 1)' }}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: { xs: 'start', sm: 'center' }, borderBottom: '1px solid rgba(93, 100, 108, 1)' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Image sx={{ width: '2rem', height: '2rem', mr: '1rem' }} alt="empty content" src={Bitcoinimg} />
                                             <Box>
@@ -65,7 +73,7 @@ const TokenLock = () => {
                                         <Typography component="p" sx={{ fontWeight: '400', fontSize: '12px', }}>50,000,000</Typography>
                                         <Typography component="p" sx={{ fontWeight: '400', fontSize: '14px', color: '#F20CEC' }}>View</Typography>
                                     </Box>
-                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(93, 100, 108, 1)' }}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: { xs: 'start', sm: 'center' }, borderBottom: '1px solid rgba(93, 100, 108, 1)' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Image sx={{ width: '2rem', height: '2rem', mr: '1rem' }} alt="empty content" src={Bitcoinimg} />
                                             <Box>
@@ -76,7 +84,7 @@ const TokenLock = () => {
                                         <Typography component="p" sx={{ fontWeight: '400', fontSize: '12px', }}>50,000,000</Typography>
                                         <Typography component="p" sx={{ fontWeight: '400', fontSize: '14px', color: '#F20CEC' }}>View</Typography>
                                     </Box>
-                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(93, 100, 108, 1)' }}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: { xs: 'start', sm: 'center' }, borderBottom: '1px solid rgba(93, 100, 108, 1)' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Image sx={{ width: '2rem', height: '2rem', mr: '1rem' }} alt="empty content" src={Bitcoinimg} />
                                             <Box>

@@ -1,13 +1,14 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { Autocomplete, FormControl, FormGroup, MenuItem, TextField } from '@mui/material';
+import { Autocomplete, FormControl, FormGroup, MenuItem, Stack, TextField } from '@mui/material';
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import { ColorButton } from '../../../components/Button';
-import CalendarIcon from '../../../assets/CalendarIcon.png'
+import Paragraph from '../../../components/Paragraph';
+import { StaticDateRangePicker } from '@mui/lab';
 
 
 const PresaleInformation = () => {
@@ -26,8 +27,7 @@ const PresaleInformation = () => {
                 transform: 'translateX(16px)',
                 color: '#FFC0CB',
                 '& + .MuiSwitch-track': {
-                    backgroundColor: theme.palette.mode === 'dark' ? '#F20CEC' : '#65C466',
-                    opacity: 0.15,
+                    backgroundColor: theme.palette.mode === 'dark' ? 'rgba(242, 12, 236,0.6)' : '#65C466',
                     border: 0,
                 },
                 '&.Mui-disabled + .MuiSwitch-track': {
@@ -83,97 +83,101 @@ const PresaleInformation = () => {
         },]
 
     return (
-        <Box>
-            <Box style={{ backgroundColor: '#1D1F23', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', padding: '5%', borderRadius: '20px', marginTop: '2rem' }}>
-                <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                    <TextField label="Sale Title" type="text" sx={{ display: 'flex', flex: '1' }} />
-                    <TextField label="Total Supply" type="text" sx={{ display: 'flex', flex: '1' }} />
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                    <Autocomplete disablePortal options={top100Films} sx={{ display: 'flex', flex: '1' }}
+        <Box sx={{
+            backgroundColor: '#1D1F23', display: 'flex', flexDirection: 'column', rowGap: '2rem', boxSizing: 'border-box', borderRadius: '20px',
+            marginTop: { xs: '0', sm: '1rem', md: '2rem' },
+            padding: { xs: '1rem', sm: '1rem', md: '2rem', lg: '3rem' },
+        }}>
+            <Stack spacing={3.2} sx={{ mt: { xs: '2rem', sm: '1rem', md: '0' } }}>
+                <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                    <TextField fullWidth label="Sale Title" type="text" />
+                    <TextField fullWidth label="Total Supply" type="text" />
+                </Stack>
+                <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                    <Autocomplete fullWidth disablePortal options={top100Films}
                         renderInput={(params) => <TextField {...params} label="Fund Raising Token" />} />
-                    <TextField label="Custom Fund Raising Token" type="text" sx={{ display: 'flex', flex: '1' }} />
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                    <TextField label="Presale Rate" type="text" sx={{ display: 'flex', flex: '1' }} />
-                    <TextField label="Dex Listing Rate" type="text" sx={{ display: 'flex', flex: '1' }} />
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                    <TextField label="Dex Liquidity [%]" type="text" sx={{ display: 'flex', flex: '1' }} />
-                    <TextField label="Liquidity Locked [Days]" type="text" sx={{ display: 'flex', flex: '1' }} />
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                    <TextField label="Soft Cap [BNB]" type="text" sx={{ display: 'flex', flex: '1' }} />
-                    <TextField label="Hard Cap [BNB]" type="text" sx={{ display: 'flex', flex: '1' }} />
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                    <TextField label="Minimum Buy [BNB]" type="text" sx={{ display: 'flex', flex: '1' }} />
-                    <TextField label="Maximum Buy [BNB]" type="text" sx={{ display: 'flex', flex: '1' }} />
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                    <TextField sx={{ display: 'flex', flex: '1' }}
+                    <TextField fullWidth label="Custom Fund Raising Token" type="text" />
+                </Stack>
+                <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                    <TextField fullWidth label="Presale Rate" type="text" />
+                    <TextField fullWidth label="Dex Listing Rate" type="text" />
+                </Stack>
+                <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                    <TextField fullWidth label="Dex Liquidity [%]" type="text" />
+                    <TextField fullWidth label="Liquidity Locked [Days]" type="text" />
+                </Stack>
+                <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                    <TextField fullWidth label="Soft Cap [BNB]" type="text" />
+                    <TextField fullWidth label="Hard Cap [BNB]" type="text" />
+                </Stack>
+                <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                    <TextField fullWidth label="Minimum Buy [BNB]" type="text" />
+                    <TextField fullWidth label="Maximum Buy [BNB]" type="text" />
+                </Stack>
+                <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                    <TextField fullWidth
                         id="datetime-local" label="Start Date [local]"
                         type="datetime-local" defaultValue="2017-05-24T10:30"
-                       />
-                    <TextField sx={{ display: 'flex', flex: '1' }}
+                    />
+                    <TextField fullWidth
                         id="datetime-local" label="End Date [local]"
                         type="datetime-local" defaultValue="2017-05-24T10:30" />
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                    <TextField sx={{ display: 'flex', flex: '1' }}
+                </Stack>
+                <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                    <TextField fullWidth
                         id="datetime-local" label="Estimated DEX Listing Date [local]"
                         type="datetime-local" defaultValue="2017-05-24T10:30" />
-                    <Autocomplete disablePortal options={top100Films} sx={{ display: 'flex', flex: '1' }}
+                    <Autocomplete fullWidth disablePortal options={top100Films}
                         renderInput={(params) => <TextField {...params} label="Select what happens to Unsold Tokens" />} />
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', columnGap: '3%', boxSizing: 'border-box' }}>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', flex: '1' }}>
-                        <Autocomplete disablePortal options={top100Films} sx={{ display: 'flex', flex: '1' }}
+                </Stack>
+                <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={3}>
+                    <Stack sx={{ width: '100%' }}>
+                        <Autocomplete fullWidth disablePortal options={top100Films}
                             renderInput={(params) => <TextField {...params} label="Presale Type" />} />
-                        <Typography component="p" sx={{ color: '#FC9823', textAlign: 'left', mt: '0.5rem' }}>
-                            Read more about Presale Type here Docs
-                        </Typography>
-                    </Box>
-                    <TextField sx={{ display: 'flex', flex: '1' }} label="Whitelist Timer" type="text" />
-                </Box>
-                <Box sx={{ width: '48%' }}>
-                    <TextField label="Stealth Wallet" type="text" sx={{ display: 'flex' }} />
-                    <Typography component="p" sx={{ color: '#FC9823', textAlign: 'left', mt: '0.5rem' }}>
-                        Read more about Presale Type here Docs
+                        <Paragraph sx={{ color: '#FC9823', textAlign: 'left', mt: '0.5rem', fontSize: '12px', width: '100%' }}>Read more about Presale Type here Docs</Paragraph>
+                    </Stack>
+                    <TextField fullWidth label="Whitelist Timer" type="text" />
+                </Stack>
+                <Stack sx={{ width: { xs: '100%', md: '50%', lg: '49%' } }}>
+                    <TextField label="Stealth Wallet" type="text" />
+                    <Paragraph sx={{ color: '#FC9823', textAlign: 'left', mt: '0.5rem', fontSize: '12px' }}>Read more about Presale Type here Docs</Paragraph>
+                </Stack>
+            </Stack>
+            <Stack direction={{ xs: 'column', sm: 'row', md: 'row', lg: 'row' }} justifyContent="space-between">
+                <FormControl>
+                    <FormLabel component="legend" sx={{ textAlign: 'left' }}>Optional Features:</FormLabel>
+                    <FormGroup>
+                        <FormControlLabel sx={{ width: '100%' }}
+                            control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
+                            label="Anti Sniper Protection" />
+                        <FormControlLabel sx={{ width: '100%' }}
+                            control={<IOSSwitch sx={{ m: 1 }} />}
+                            label="Anti Sniper Protection" />
+                        <FormControlLabel
+                            control={<IOSSwitch sx={{ m: 1 }} />}
+                            label="Add Team Token Vesting" />
+                    </FormGroup>
+                </FormControl>
+                <Box sx={{
+                    display: 'flex', flexDirection: 'column', rowGap: '1rem',
+                    justifyContent: 'end', mt: { xs: '3rem', sm: '1rem', lg: '0' }
+                }}>
+                    <Typography component="p" sx={{ color: '#FC9823', textAlign: { xs: 'center', md: 'right' } }}>
+                        0 $coin Needed to Create Pool!
                     </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'end' }}>
-                    <FormControl sx={{ display: 'flex', flex: '1' }}>
-                        <FormLabel component="legend" sx={{ textAlign: 'left' }}>Optional Features:</FormLabel>
-                        <FormGroup>
-                            <FormControlLabel
-                                control={<IOSSwitch sx={{ m: 1 }} defaultChecked color="warning"/>}
-                                label="Anti Sniper Protection" />
-                            <FormControlLabel
-                                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                                label="Add Team Token Vesting" />
-                            <FormControlLabel
-                                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                                label="Add Presale Vesting" />
-                        </FormGroup>
-                    </FormControl>
-                    <Box sx={{ display: 'flex', flex: '1', flexDirection: 'column', rowGap: '0.5rem', justifyContent: 'end' }}>
-                        <Typography component="p" sx={{ color: '#FC9823', textAlign: 'right', mt: '0.5rem' }}>
-                            0 $coin Needed to Create Pool!
-                        </Typography>
-                        <Typography component="p" sx={{ color: '#F20CEC', textAlign: 'right', mt: '0.5rem' }}>
-                            Estimated Mcap 0$
-                        </Typography>
-                        <Box sx={{ display: 'flex', columnGap: '1rem', justifyContent: 'end', textAlign: 'right' }}>
-                            <ColorButton sx={{ width: '8rem', bgcolor: 'transparent', border: '1px solid #F20CEC' }}>Back</ColorButton>
-                            <ColorButton sx={{ width: '8rem' }}>Next</ColorButton>
-                        </Box>
+                    <Typography component="p" sx={{ color: '#F20CEC', textAlign: { xs: 'center', md: 'right' } }}>
+                        Estimated Mcap 0$
+                    </Typography>
+                    <Box sx={{
+                        display: 'flex', columnGap: '1rem', textAlign: 'right',
+                        justifyContent: { xs: 'center', md: 'end' }
+                    }}>
+                        <ColorButton sx={{ width: '8rem', bgcolor: 'transparent', border: '1px solid #F20CEC' }}>Back</ColorButton>
+                        <ColorButton sx={{ width: '8rem' }}>Next</ColorButton>
                     </Box>
-                    
                 </Box>
-            </Box>
-        </Box >
-
+            </Stack>
+        </Box>
 
     )
 }

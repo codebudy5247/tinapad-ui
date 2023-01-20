@@ -5,9 +5,7 @@ import Image from "../../../components/Image";
 import btcImg from "../../../assets/btc.png";
 import Chip from "@mui/material/Chip";
 import ETHImg from "../../../assets/ETH.png";
-import LinearProgress, {
-  linearProgressClasses,
-} from "@mui/material/LinearProgress";
+import LinearProgress, { linearProgressClasses } from "@mui/material/LinearProgress";
 import Divider from "@mui/material/Divider";
 import notifyImg from "../../../assets/bell.png";
 import heartImg from "../../../assets/Heart.png";
@@ -31,11 +29,10 @@ const Card = (props: any) => {
     <Box
       sx={{
         backgroundImage: `url(${props?.explore?.background})`,
-        width: { xs: '300px', sm: '310px', md: '352px', lg: '352px' },
-        height: { xs: '295px', sm: '305px', md: '346px', lg: '347px' },
-        borderRadius: "25px",
-        p: 2,
-        mb: 2,
+        height: { xs: '300px', sm: '300px', md: '346px', lg: '347px' },
+        width: { xs: '90vw', sm: '300px', md: '352px', lg: '352px' },
+        borderRadius: "25px", mb: 2, 
+        py: 2, px: 2,
       }}
     >
       <Box sx={{ display: "flex", gap: 2 }}>
