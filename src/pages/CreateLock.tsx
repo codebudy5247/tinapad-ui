@@ -16,7 +16,7 @@ const CreateLock = () => {
                 width: { xs: '92%', sm: '90%', md: '80%', lg: '65%' }
             }}>
                 <FormControl sx={{ mt: { xs: '2rem', sm: '1rem', md: '0' } }}>
-                    <FormLabel sx={{ fontWeight: { xs: '500', sm: '600' }, fontSize: '24px', color: '#FFFFFF', textAlign: 'left', mb: '4%' }}>
+                    <FormLabel sx={{ fontWeight: '600', fontSize: '24px', color: '#FFFFFF', textAlign: 'left', mb: '4%' }}>
                         Create Your Locks For Free</FormLabel>
                     <FormGroup sx={{ display: 'flex', flexDirection: 'column', rowGap: '1.5rem' }}>
                         <TextField

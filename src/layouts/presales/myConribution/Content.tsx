@@ -111,7 +111,7 @@ const Content = () => (
               fontSize: "12px",
               lineHeight: "18px",
               textTransform: "capitalize",
-              textAlign: "start",
+              textAlign: "left",
               opacity: 0.6,
             }}
           >
@@ -126,6 +126,7 @@ const Content = () => (
                 textTransform: "capitalize",
                 color: "#F20CEC",
                 textAlign: "right",
+                overflowWrap: 'anywhere'
               }}
             >
               0xeE32AefeB41678d750FD794B11403b0d3113509B
@@ -136,7 +137,7 @@ const Content = () => (
                 fontSize: "10px",
                 lineHeight: "15px",
                 textTransform: "capitalize",
-                textAlign: "start",
+                textAlign: "right",
                 opacity: 0.6,
                 mixBlendMode: "normal",
               }}

@@ -208,6 +208,7 @@ const Tokenomix = () => {
           textTransform: "capitalize",
           textAlign: "start",
           color: "#FF6B36",
+          overflowWrap: 'anywhere'
         }}
       >
         0xeE32AefeB41678d750FD794B11403b0d3113509B

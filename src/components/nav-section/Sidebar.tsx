@@ -18,6 +18,7 @@ import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
+
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -54,11 +55,12 @@ const Sidebar = () => {
         </ListItemButton>
 
         {appRoutes.map((route, index) =>
-          route.sidebarProps ? (
-            route.child ?
-              (<SidebarItemCollapse item={route} key={index} />) :
-              (<SidebarItem item={route} key={index} />)
-          ) : null
+          route.sidebarProps ?
+            (
+              route.child ?
+                (<SidebarItemCollapse item={route} key={index} />) :
+                (<SidebarItem item={route} key={index} />)
+            ) : null
         )}
 
         <ListItemButton sx={{ ml: 1 }}>

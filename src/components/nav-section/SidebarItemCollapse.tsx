@@ -34,18 +34,11 @@ const SidebarItemCollapse = ({ item }: Props) => {
       <ListItemButton
         onClick={() => setOpen(!open)}
         sx={{
-          "&: hover": {
-            backgroundColor: colorConfigs.sidebar.hoverBg,
-          },
-          paddingY: "12px",
-          paddingX: "24px",
+          "&: hover": { backgroundColor: colorConfigs.sidebar.hoverBg, },
+          paddingY: "12px", paddingX: "24px",
         }}
       >
-        <ListItemIcon
-          sx={{
-            color: colorConfigs.sidebar.color,
-          }}
-        >
+        <ListItemIcon sx={{ color: colorConfigs.sidebar.color, }}>
           {item.sidebarProps.icon && item.sidebarProps.icon}
         </ListItemIcon>
         <ListItemText
@@ -58,11 +51,9 @@ const SidebarItemCollapse = ({ item }: Props) => {
         <List>
           {item.child?.map((route, index) =>
             route.sidebarProps ? (
-              route.child ? (
-                <SidebarItemCollapse item={route} key={index} />
-              ) : (
-                <SidebarItem item={route} key={index} />
-              )
+              route.child ?
+                (<SidebarItemCollapse item={route} key={index} />) :
+                (<SidebarItem item={route} key={index} />)
             ) : null
           )}
         </List>

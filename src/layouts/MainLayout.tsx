@@ -25,19 +25,12 @@ const MainLayout = () => {
 
   return (
     <>
-      <Box component="nav" sx={{
-        flexShrink: 0
-      }}>
+      <Box component="nav" sx={{ flexShrink: 0 }}>
         {
           mobileView ? null : <Sidebar />
         }
       </Box>
-      <Box component="main" sx={{
-        flexGrow: 1,
-        height: "100vh",
-        overflow: "auto",
-        width: 'fix-layout'
-      }}>
+      <Box component="main" sx={{ flexGrow: 1, height: "100vh", overflow: "auto", width: 'fix-layout' }}>
         <Toolbar />
         <Outlet />
       </Box>
